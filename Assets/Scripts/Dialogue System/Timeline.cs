@@ -177,6 +177,11 @@ public class Timeline : MonoBehaviour
 
     public virtual void DialogueOver()
     {
+        if (!IsInCutscene)
+        {
+            return;
+        }
+
         started = false;
         EndLoop();
         EndPause();

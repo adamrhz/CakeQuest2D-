@@ -30,3 +30,23 @@ public class ConditionResultObject
 
     }
 }
+
+
+[Serializable, Inspectable]
+public class IsInPartyConditionResultObject
+{
+    [Inspectable] public CharacterObject Character;
+    [Inspectable] public Party Party;
+    [Inspectable] public bool wantedResult = true;
+
+    public bool CheckCondition()
+    {
+        if (!Character || !Party)
+        {
+            return true;
+        }
+        return Party.PartyMembers.Contains(Character) == wantedResult;
+    }
+
+
+}

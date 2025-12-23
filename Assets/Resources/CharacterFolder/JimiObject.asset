@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UID: a402f39d484a5f24a855910f0b6fbd57
   characterData: {fileID: 11400000, guid: b5d3335479d751c45b5ddbd3ccb15ee0, type: 2}
-  Health: 200
+  Health: 145
   MaxHealth: 200
-  Mana: 200
+  Mana: 158
   MaxMana: 200
   Speed: 0
   AttackDamage: 5
@@ -31,6 +31,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2b21ef916f6943c439b71a7c74568878, type: 3}
   Attacks:
   - {fileID: 11400000, guid: 2d41dcd037b05c140937654bc91ba314, type: 2}
+  - {fileID: 11400000, guid: 88fcdde9db474b644ac39ec74f93b2e5, type: 2}
+  - {fileID: 11400000, guid: b40411e46752ac04fa9b9930a11f04ae, type: 2}
+  - {fileID: 11400000, guid: 7af5a862e02b4384eadbb9ba09e0c416, type: 2}
   animationController: {fileID: 22100000, guid: 993e5c20cc0303943982922e5b1118f9, type: 2}
   InParty: {fileID: 11400000, guid: eaf611e04a0733c4c9ca4da8a0a31cb7, type: 2}
   recipeLength: 3

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public abstract class Controller : MonoBehaviour
+public abstract class Controller : NeoInputManager
 {
 
     //public Vector2 wasdInput = Vector2.zero;
@@ -39,12 +39,11 @@ public abstract class Controller : MonoBehaviour
 
 
     public Vector2 movement;
-    public bool JumpIsPressed;
-    public bool ReturnIsPressed;
-    public bool SelectIsPressed;
-    public bool PauseIsPressed;
 
-
+    public override void Awake()
+    {
+        base.Awake();
+    }
     public void CanInteract(bool _canInteract)
     {
         canInteract = _canInteract;

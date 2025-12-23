@@ -41,7 +41,7 @@ public class NothingBehaviour : CharacterBehaviour
 
     public void HandleSkipButton()
     {
-        if (character.inputManager.PauseIsPressed)
+        if (character.inputManager.GetButton(ButtonName.Pause))
         {
             UICanvas.SetSkipPanel(skipTimer / skipTimerMax);
             skipTimer += Time.deltaTime;

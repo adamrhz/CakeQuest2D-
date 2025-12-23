@@ -5,21 +5,29 @@ using UnityEngine;
 using System;
 using System.Linq;
 
+public struct ButtonName
+{
+    public static string Move = "Move";
+    public static string Navigate = "Navigate";
+    public static string Interact = "Interact";
+    public static string SecondAct = "SecondAct";
+    public static string Pause = "Pause";
+}
+
 [RequireComponent(typeof(PlayerInput))]
-
-
 public class InputManager : Controller
 {
     public static InputManager inputManager;
 
     public static string controlSettings = "keyboard";
-    private void Awake()
+    public override void Awake()
     {
         inputManager = this;
+        base.Awake();
     }
-    public void SetMove(InputAction.CallbackContext context)
+    public void SetMove()
     {
-        Vector2 wasdInput = context.ReadValue<Vector2>().normalized;
+        Vector2 wasdInput = GetAxis2D("Move");
 
         // Round wasdInput to the closest cardinal or diagonal direction
         Vector2 roundedInput = RoundToCardinalDiagonal(wasdInput);
@@ -91,16 +99,64 @@ public class InputManager : Controller
     }
 
 
+    public void GetPauseButton()
+    {
+        GetButton(ButtonName.Pause);
+    }
+
+
+    public void Update()
+    {
+
+        if (GetButtonDown(ButtonName.Pause))
+        {
+            OnPausedPressed?.Invoke();
+        }
+        if (GetButtonUp(ButtonName.Pause))
+        {
+            OnPausedReleased?.Invoke();
+        }
+
+        if (canInteract)
+        {
+
+            if (GetButtonDown(ButtonName.Interact))
+            {
+                OnSelectPressed?.Invoke();
+            }
+            if (GetButtonUp(ButtonName.Interact))
+            {
+                OnSelectReleased?.Invoke();
+            }
+        }
+
+
+        if (GetButtonDown(ButtonName.Interact))
+        {
+            OnSecretSelectPressed?.Invoke();
+        }
+
+
+        if (GetButtonDown(ButtonName.SecondAct))
+        {
+            OnReturnPressed?.Invoke();
+        }
+        if (GetButtonUp(ButtonName.SecondAct))
+        {
+            OnReturnReleased?.Invoke();
+        }
+        SetMove();
+    }
+
+
     public void OnJump(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            JumpIsPressed = true;
             OnJumpPressed?.Invoke();
         }
         if (context.canceled)
         {
-            JumpIsPressed = false ;
             OnJumpRelease?.Invoke();
         }
         jump = context.action.triggered;
@@ -113,12 +169,10 @@ public class InputManager : Controller
 
             if (context.performed)
             {
-                SelectIsPressed = true;
                 OnSelectPressed?.Invoke();
             }
             if (context.canceled)
             {
-                SelectIsPressed = false;
                 OnSelectReleased?.Invoke();
             }
             attack = context.action.triggered;
@@ -135,12 +189,10 @@ public class InputManager : Controller
     {
         if (context.performed)
         {
-            ReturnIsPressed = true;
             OnReturnPressed?.Invoke();
         }
         if (context.canceled)
         {
-            ReturnIsPressed = false;
             OnReturnReleased?.Invoke();
         }
         attack = context.action.triggered;
@@ -150,12 +202,10 @@ public class InputManager : Controller
         // Check if the interaction is a press (button down)
         if (callback.started)
         {
-            PauseIsPressed = true;
             OnPausedPressed?.Invoke();
         }
         if (callback.canceled)
         {
-            PauseIsPressed = false;
             OnPausedReleased?.Invoke();
         }
     }

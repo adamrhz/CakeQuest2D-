@@ -32,6 +32,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6328120429896446888}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,7 +41,6 @@ Transform:
   - {fileID: 6328120429556896885}
   - {fileID: 1104907899857637173}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2145510011
 MonoBehaviour:
@@ -60,6 +60,7 @@ MonoBehaviour:
   inputManager: {fileID: 0}
   heroParty: {fileID: 11400000, guid: 4aac9192a920b464ebc2902086168dc8, type: 2}
   Sprite: {fileID: 6328120428649999559}
+  componentsToToggle: []
 --- !u!114 &6328120429896446889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 1baa1f0818c1bf2428dc3addab5844b3, type: 3}
-  m_NotificationBehavior: 2
+  m_NotificationBehavior: 3
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -174,10 +175,6 @@ MonoBehaviour:
     m_ActionName: OverWorld/SecondAct[/Mouse/rightButton,/DualSenseGamepadHID/buttonEast]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: b9b07790-e223-43c9-b3b5-1d6d67906887
-    m_ActionName: BattleScene/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/DualSenseGamepadHID/leftStick]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 1fa46c09-db15-4fc9-8a6a-e98010b95726
     m_ActionName: BattleScene/Pause[/DualSenseGamepadHID/start,/Keyboard/escape]
   - m_PersistentCalls:
@@ -192,6 +189,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 25004ea6-e51c-4e15-9c37-e09eafa07740
     m_ActionName: BattleScene/Jump[/Keyboard/space,/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 61447996-80b3-40da-baa4-c8322400381f
+    m_ActionName: OverWorld/Navigate[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ba8990ae-fa34-4513-81e7-7730dbed7053
+    m_ActionName: BattleScene/Navigate[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: KeyboardControls
   m_DefaultActionMap: OverWorld
@@ -228,6 +233,12 @@ Rigidbody2D:
   m_AngularDrag: 1000
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 9c497a4ce1f356b448c0dd3eca091d35, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 0
   m_CollisionDetection: 0
@@ -242,6 +253,25 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 9c497a4ce1f356b448c0dd3eca091d35, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -265,7 +295,7 @@ MonoBehaviour:
   minimumFadeTime: 1
 --- !u!95 &1800461113
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -282,7 +312,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1173007849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,16 +326,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 258d6ac1331beb34eaf5ab68b0525af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainInput: {fileID: 0}
+  Buttons: []
+  Axis2D: []
+  BlockInput: 0
+  CurrentMap: 
   jump: 0
   attack: 0
   canControl: 1
   canInteract: 1
+  movement: {x: 0, y: 0}
+  JumpIsPressed: 0
+  ReturnIsPressed: 0
+  SelectIsPressed: 0
+  PauseIsPressed: 0
 --- !u!1001 &119954442625773857
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 6328120429896446894}
     m_Modifications:
     - target: {fileID: 513775648185193061, guid: f5216d75358722e44ac8047e3015c3d0, type: 3}
@@ -375,12 +416,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7094337421483284735, guid: f5216d75358722e44ac8047e3015c3d0, type: 3}
+      propertyPath: m_labelHash
+      value: 0.0000001489224
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094337421483284735, guid: f5216d75358722e44ac8047e3015c3d0, type: 3}
+      propertyPath: m_CategoryHash
+      value: 1.8284411e-22
+      objectReference: {fileID: 0}
     - target: {fileID: 8152561353782809737, guid: f5216d75358722e44ac8047e3015c3d0, type: 3}
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5216d75358722e44ac8047e3015c3d0, type: 3}
 --- !u!95 &3941844833393866871 stripped
 Animator:
@@ -402,7 +453,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TransformParent: {fileID: 6328120429896446894}
     m_Modifications:
     - target: {fileID: 400018343892678139, guid: 60436a735c70eed48b09f0ff6551e47f, type: 3}
@@ -510,7 +561,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60436a735c70eed48b09f0ff6551e47f, type: 3}
 --- !u!224 &1104907899857637173 stripped
 RectTransform:

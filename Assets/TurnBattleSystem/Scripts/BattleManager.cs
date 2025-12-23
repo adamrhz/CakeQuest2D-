@@ -533,8 +533,31 @@ public class BattleManager : MonoBehaviour
     private void Update()
     {
         BattleState?.Handle();
+        HandleInputs();
     }
-
+    public virtual void HandleInputs()
+    {
+        if (InputManager.inputManager.GetAxis2DDown(ButtonName.Move))
+        {
+            BattleState?.OnNavigate(InputManager.inputManager.GetAxis2D(ButtonName.Move));
+        }
+        if (InputManager.inputManager.GetButtonDown(ButtonName.Interact))
+        {
+            BattleState?.OnSelect();
+        }
+        if (InputManager.inputManager.GetButtonDown(ButtonName.SecondAct))
+        {
+            BattleState?.OnBack();
+        }
+        if (InputManager.inputManager.GetButtonUp(ButtonName.Interact))
+        {
+            BattleState?.OnSelectReleased();
+        }
+        if (InputManager.inputManager.GetButtonUp(ButtonName.SecondAct))
+        {
+            BattleState?.OnBackReleased();
+        }
+    }
     public void SetCursor(BattleCharacter character, bool resetCursors = true)
     {
         if (resetCursors)

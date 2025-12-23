@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3116605184036968071}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 794.75256, y: 443.25375, z: 3.034773}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3116605184036968069
 MonoBehaviour:
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 1baa1f0818c1bf2428dc3addab5844b3, type: 3}
-  m_NotificationBehavior: 2
+  m_NotificationBehavior: 3
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -87,22 +87,6 @@ MonoBehaviour:
     m_ActionId: fd732e6d-a5a5-431a-b91a-feb45755ddf5
     m_ActionName: OverWorld/SecondAct[/Mouse/rightButton,/DualSenseGamepadHID/buttonEast]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3116605184036968070}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: SetMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: b9b07790-e223-43c9-b3b5-1d6d67906887
-    m_ActionName: BattleScene/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/DualSenseGamepadHID/leftStick]
-  - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 1fa46c09-db15-4fc9-8a6a-e98010b95726
     m_ActionName: BattleScene/Pause[/DualSenseGamepadHID/start,/Keyboard/escape]
@@ -142,9 +126,17 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 25004ea6-e51c-4e15-9c37-e09eafa07740
     m_ActionName: BattleScene/Jump[/Keyboard/space,/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 61447996-80b3-40da-baa4-c8322400381f
+    m_ActionName: OverWorld/Navigate[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ba8990ae-fa34-4513-81e7-7730dbed7053
+    m_ActionName: BattleScene/Navigate[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: BattleScene
+  m_DefaultActionMap: f1a8f626-3e6b-4b40-baa9-850c2fb22f69
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &3116605184036968070
@@ -159,7 +151,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 258d6ac1331beb34eaf5ab68b0525af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainInput: {fileID: 3116605184036968069}
+  Buttons: []
+  Axis2D: []
+  BlockInput: 0
+  CurrentMap: 
   jump: 0
   attack: 0
   canControl: 1
   canInteract: 1
+  movement: {x: 0, y: 0}

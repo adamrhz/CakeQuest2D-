@@ -2,43 +2,43 @@
     "Data": [
         {
             "dataId": "Scene1_Maison_Jimi_001",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Qu’est-ce que j’ai faim….. Est-ce qu’il reste du gâteau?\"}"
+            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"I'm so hungry... I wonder if there's any cake left.\"}"
         },
         {
             "dataId": "Scene1_Maison_Jimi_002",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/portrait_jimi_angry\",\"talkerName\":\"Jimi\",\"line\":\"Papa a encore tout bouffé ce gros porc.\"}"
+            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/portrait_jimi_angry\",\"talkerName\":\"Jimi\",\"line\":\"This fat ass... Dad ate it all.\"}"
         },
         {
             "dataId": "Scene1_Maison_Jimi_003",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Bon, pas le choix, je vais devoir en refaire. Il devrait rester des ingrédients en bas.\"}"
+            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Well, I dont have a choice. I have to bake another one. There should be ingredients left.\"}"
         },
         {
             "dataId": "Scene1_Maison_Jimi_004",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Bon, ça devrait faire l’affaire. Direction le <color={color_success}>four</color>!.\"}"
+            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Alright, this should be enough. To the <color={color_success}>oven</color>!.\"}"
         },
         {
             "dataId": "Scene1_Maison_Jimi_005",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Cuire à 180 degrés pour 30 minutes… J’ai vraiment pas le temps pour ces conneries.\"}"
+            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Bake at 180 degrees for 30 minutes… Hmm.. I don't really have time for this shit.\"}"
         },
         {
             "dataId": "Scene1_Maison_Jimi_006",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"D’après mes calculs, si je le cuis à 324 000 degrés, il sera cuit en une seconde.\"}"
+            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"According to my calculations... if I bake it at 324 000 degrees, it will be baked in ONE second!\"}"
         },
         {
             "dataId": "Scene1_Maison_Jimi_007",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Je suis vraiment un génie.\"}"
+            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"I'm such a genius.\"}"
         },
         {
             "dataId": "Scene1_Maison_Jimi_008",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Oh non… Papa va me tuer.\"}"
+            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Oh no… Dad's gonna kill me.\"}"
         },
         {
             "dataId": "Scene2_Limbo_001",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Jimi…<waitSec=0.8> Réveille-toi.\"}"
+            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Jimi…<waitSec=0.8> Wake up...\"}"
         },
         {
             "dataId": "Scene2_Limbo_002",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Réveille-toi Jimi.\"}"
+            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Wake up Jimi.\"}"
         },
         {
             "dataId": "Scene2_Limbo_003",
@@ -46,7 +46,7 @@
         },
         {
             "dataId": "Scene2_Limbo_004",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Ngh…<waitSec=0.8> Encore 5 minutes.\"}"
+            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Ngh…<waitSec=0.8> 5 more minutes...\"}"
         },
         {
             "dataId": "Scene2_Limbo_005",
@@ -58,35 +58,35 @@
         },
         {
             "dataId": "Scene2_Limbo_007",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"OH<waitSec=0.6> RÉVEILLE-TOI!\"}"
+            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"OH<waitSec=0.6> WAKE UP!!\"}"
         },
         {
             "dataId": "Scene2_Limbo_008",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Quoiiiiii?!\"}"
+            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Whaaaaat?!\"}"
         },
         {
             "dataId": "Scene2_Limbo_009",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Oh,<waitSec=0.4> c’est quoi ce bordel?\"}"
+            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Oh,<waitSec=0.4> what the hell is this?\"}"
         },
         {
             "dataId": "Scene2_Limbo_010",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Écoute-moi Jimi…<waitSec=0.8> T’as vraiment fait une grosse connerie.\"}"
+            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Listen to me Jimi…<waitSec=0.8> You actually messed everything up.\"}"
         },
         {
             "dataId": "Scene2_Limbo_011",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Comment ça?\"}"
+            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"What do you mean?\"}"
         },
         {
             "dataId": "Scene2_Limbo_012",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Mais vraiment une<waitSec=0.2> ÉNORME<waitSec=0.2> connerie.\"}"
+            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"No like you actually<waitSec=0.2> MESSED<waitSec=0.2> everything up.\"}"
         },
         {
             "dataId": "Scene2_Limbo_013",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"J’ai fait quoi?\"}"
+            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"What did I do?\"}"
         },
         {
             "dataId": "Scene2_Limbo_014",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Genre si y’avait un record du monde du plus gros débile,<waitSec=0.4> tu serais numéro un.\"}"
+            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Like, if there was a guinees world record of the biggest idiot ever,<waitSec=0.4> you'd be undethronable.\"}"
         },
         {
             "dataId": "Scene2_Limbo_015",
@@ -94,15 +94,15 @@
         },
         {
             "dataId": "Scene2_Limbo_016",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Franchement<waitSec=0.4>, je sais pas comment tu fais pour te regarder dans le miroi-<skipLine>\"}"
+            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Honestly<waitSec=0.4>, i don't even know how you look at yourself in the mirro-<skipLine>\"}"
         },
         {
             "dataId": "Scene2_Limbo_017",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Oh c’est bon! Dis-moi ce que j’ai fait ou je retourne dormir.\"}"
+            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"OKAY I GET IT! Tell me what happened or i'm going back to bed.\"}"
         },
         {
             "dataId": "Scene2_Limbo_0180",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"J’avoue<waitSec=0.3>, j’abuse…<waitSec=0.8> Allons droit au but.\"}"
+            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Okay,<waitSec=0.3>, i overdid it...<waitSec=0.8> Let's get straight to it.\"}"
         },
         {
             "dataId": "Scene2_Limbo_0181",

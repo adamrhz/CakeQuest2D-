@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bbcde107474c9f47ab83856a648bb0a, type: 3}
+  m_Name: Cheese
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  Name: Cheese
+  Icon: {fileID: 858079195, guid: c87c1e2f2bb0539409f7bf1ff521498e, type: 3}
+  MealStatModifiers:
+    Sweetness: 2
+    Bitterness: 2
+    Saltiness: 4
+    Sourness: 1
+  FailureRateModifier: 4
