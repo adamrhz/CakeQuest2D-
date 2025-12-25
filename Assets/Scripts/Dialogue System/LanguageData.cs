@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public enum Language
 {
@@ -90,6 +91,11 @@ public class LanguageData
         return _singleton != null;
     }
 
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    static void Init()
+    {
+        LoadAllJson();
+    }
 
     public void SetGlobalDictionary()
     {
@@ -279,6 +285,73 @@ public class LanguageData
 
         return combinedData;
     }
+    public static void LoadAllJson()
+    {
+        string languageSuffix = GetLanguageSuffix();
+        string languageFolder = $"translation/{languageSuffix}";
+        string colorFolder = $"translation/Global_Colors";
+
+        TextAsset[] files = Resources.LoadAll<TextAsset>(languageFolder);
+
+        if (files == null || files.Length == 0)
+        {
+            Debug.LogError($"No files found in Resources/{languageFolder}");
+            return;
+        }
+
+        LanguageData combinedData = new LanguageData();
+
+        foreach (TextAsset file in files)
+        {
+            if (file == null) continue;
+
+            try
+            {
+                LanguageData data = JsonConvert.DeserializeObject<LanguageData>(file.text);
+                if (data != null)
+                {
+                    if (data.Data != null)
+                        combinedData.Data.AddRange(data.Data);
+
+                    if (data.globalColors != null)
+                        combinedData.globalColors.AddRange(data.globalColors);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"Error parsing file {file.name}: {e.Message}");
+                Debug.LogError(file.text);
+            }
+        }
+
+        TextAsset colorFile = Resources.Load<TextAsset>(colorFolder);
+
+        if (colorFile != null)
+        {
+            try
+            {
+                LanguageData data = JsonConvert.DeserializeObject<LanguageData>(colorFile.text);
+                if (data != null && data.globalColors != null)
+                {
+                    combinedData.globalColors.AddRange(data.globalColors);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"Error parsing file {colorFile.name}: {e.Message}");
+            }
+        }
+        else
+        {
+            Debug.LogWarning($"No global color file found at Resources/{colorFolder}");
+        }
+
+        combinedData.SetGlobalDictionary();
+        Singleton = combinedData;
+        Singleton.localLanguage = language;
+        OnLanguageLoaded?.Invoke();
+    }
+
 
     public static IEnumerator LoadAllJsonAsync(Action onComplete = null)
     {
@@ -551,7 +624,7 @@ public class JsonData
         }
         else
         {
-            Debug.LogWarning($"Key '{key}' not found in '{dataId}'");
+            //Debug.LogWarning($"Key '{key}' not found in '{dataId}'");
             if (key == "line")
                 returnValue = $"No Line Found with Key '{dataId} | {key}'";
         }

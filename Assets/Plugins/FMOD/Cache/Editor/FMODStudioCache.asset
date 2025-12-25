@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9145192922910228702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/ost_battle_pope
+  m_EditorClassIdentifier: 
+  Path: event:/Music/ost_battle_pope
+  Guid:
+    Data1: 837189813
+    Data2: 1193345769
+    Data3: 304947592
+    Data4: 1643647872
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 267833
+--- !u!114 &-8097562666398250316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Cake Quest - Ace Detective_Master
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Cake Quest - Ace Detective_Master
+  Guid:
+    Data1: 342052996
+    Data2: 1302721613
+    Data3: -404540013
+    Data4: -808414888
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 237825
 --- !u!114 &-6619512163418354881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,6 +101,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3343
+--- !u!114 &-6504330220961261543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/ost_loc_joy
+  m_EditorClassIdentifier: 
+  Path: event:/Music/ost_loc_joy
+  Guid:
+    Data1: -1362810169
+    Data2: 1180110200
+    Data3: 1731537032
+    Data4: -360444313
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 192679
+--- !u!114 &-6426305127400287166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/ost_misc_menu
+  m_EditorClassIdentifier: 
+  Path: event:/Music/ost_misc_menu
+  Guid:
+    Data1: -1753311889
+    Data2: 1276776694
+    Data3: 282802108
+    Data4: 1415743372
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 69851
+--- !u!114 &-5874138169277411948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Cake Quest - Game Over
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Cake Quest - Game Over
+  Guid:
+    Data1: 1087450029
+    Data2: 1282819937
+    Data3: 1394998463
+    Data4: 1579092865
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
 --- !u!114 &-5565865042300634780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +209,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1333
+--- !u!114 &-4376274542166401107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Cake Quest - A Job Well Done
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Cake Quest - A Job Well Done
+  Guid:
+    Data1: 1833347792
+    Data2: 1106783269
+    Data3: -1503436915
+    Data4: 1607868024
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 327529
+--- !u!114 &-3650252886490639996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Cake Quest - Bar Sax
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Cake Quest - Bar Sax
+  Guid:
+    Data1: 1599613039
+    Data2: 1080451535
+    Data3: -1394222924
+    Data4: 1059439046
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 221982
 --- !u!114 &-3484785945643176242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,11 +278,65 @@ MonoBehaviour:
   Path: FMOD Project/CakeQuest-2D/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639022051444119887
+  lastModified: 639022103476100498
   FileSizes:
   - Name: Desktop
     Value: 3160
   Exists: 1
+--- !u!114 &-3388668390668759930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Cake Quest - Plage Caramel
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Cake Quest - Plage Caramel
+  Guid:
+    Data1: -397212173
+    Data2: 1149937302
+    Data3: -1457334892
+    Data4: -1891472047
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 173714
+--- !u!114 &-3123034154668317538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Cake Quest - Spooky Salty Skeleton
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Cake Quest - Spooky Salty Skeleton
+  Guid:
+    Data1: -1377298536
+    Data2: 1282849231
+    Data3: 1072226963
+    Data4: -1364502910
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 80039
 --- !u!114 &-2805862510956453212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,6 +361,60 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-2063469481334085832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/ost_loc_mexi
+  m_EditorClassIdentifier: 
+  Path: event:/Music/ost_loc_mexi
+  Guid:
+    Data1: 1540525363
+    Data2: 1226327360
+    Data3: -253755755
+    Data4: 1151183475
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 53002
+--- !u!114 &-1866138037780615510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/ost_misc_jimi
+  m_EditorClassIdentifier: 
+  Path: event:/Music/ost_misc_jimi
+  Guid:
+    Data1: -1740790775
+    Data2: 1125363118
+    Data3: 410465942
+    Data4: 939701107
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 203337
 --- !u!114 &-1267404642713450469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,10 +430,10 @@ MonoBehaviour:
   Path: FMOD Project/CakeQuest-2D/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639022008626852482
+  lastModified: 639022103645667957
   FileSizes:
   - Name: Desktop
-    Value: 494
+    Value: 49468352
   Exists: 1
 --- !u!114 &-1123415033706703984
 MonoBehaviour:
@@ -162,6 +459,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-235818312341990971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/ost_loc_pc
+  m_EditorClassIdentifier: 
+  Path: event:/Music/ost_loc_pc
+  Guid:
+    Data1: 282808988
+    Data2: 1078300534
+    Data3: -944529767
+    Data4: -735106064
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 169900
 --- !u!114 &-43891441413137078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +539,25 @@ MonoBehaviour:
   - {fileID: -6583593622256441508}
   - {fileID: 6304852678569057132}
   - {fileID: 4705440741742289008}
+  - {fileID: -1866138037780615510}
+  - {fileID: 4583100960551068810}
+  - {fileID: -2063469481334085832}
+  - {fileID: 1753934815050289644}
+  - {fileID: 8369571854948020002}
+  - {fileID: -3650252886490639996}
+  - {fileID: -6426305127400287166}
+  - {fileID: -8097562666398250316}
+  - {fileID: 315488127996584928}
+  - {fileID: -3123034154668317538}
+  - {fileID: 3111832362010606128}
+  - {fileID: -235818312341990971}
+  - {fileID: -5874138169277411948}
+  - {fileID: -9145192922910228702}
+  - {fileID: 749289051092085872}
+  - {fileID: -6504330220961261543}
+  - {fileID: -4376274542166401107}
+  - {fileID: 3968450049539866439}
+  - {fileID: -3388668390668759930}
   EditorParameters:
   - {fileID: 2056703608423699620}
   - {fileID: -2805862510956453212}
@@ -223,8 +566,89 @@ MonoBehaviour:
   - {fileID: -3484785945643176242}
   StringsBanks:
   - {fileID: 6784623039437048569}
-  cacheTime: 639022051444589994
+  cacheTime: 639022103645667957
   cacheVersion: 131634
+--- !u!114 &315488127996584928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Cake Quest - Antijouiste
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Cake Quest - Antijouiste
+  Guid:
+    Data1: -814353268
+    Data2: 1152608262
+    Data3: 1816756404
+    Data4: 533413870
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 262791
+--- !u!114 &749289051092085872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/ost_misc_tls
+  m_EditorClassIdentifier: 
+  Path: event:/Music/ost_misc_tls
+  Guid:
+    Data1: 2105772478
+    Data2: 1176763742
+    Data3: -1587211073
+    Data4: -1810259598
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 238543
+--- !u!114 &1753934815050289644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Cake Quest - Sweet Sweet Monarchy
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Cake Quest - Sweet Sweet Monarchy
+  Guid:
+    Data1: 1570457140
+    Data2: 1095854804
+    Data3: -1576967015
+    Data4: 41037732
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 219062
 --- !u!114 &2056703608423699620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,6 +693,87 @@ MonoBehaviour:
   - Name: Desktop
     Value: 170016
   Exists: 1
+--- !u!114 &3111832362010606128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/ost_battle_final
+  m_EditorClassIdentifier: 
+  Path: event:/Music/ost_battle_final
+  Guid:
+    Data1: -1219534184
+    Data2: 1293276639
+    Data3: 1472760243
+    Data4: -718406634
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 267798
+--- !u!114 &3968450049539866439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Cake Quest - I kinda want to go to bed rn
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Cake Quest - I kinda want to go to bed rn
+  Guid:
+    Data1: 804340956
+    Data2: 1253316958
+    Data3: 1036918963
+    Data4: -1479077666
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 304941
+--- !u!114 &4583100960551068810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Cake Quest - Final Battle
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Cake Quest - Final Battle
+  Guid:
+    Data1: -1197165287
+    Data2: 1083640938
+    Data3: -1732728957
+    Data4: -836407507
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 267798
 --- !u!114 &4705440741742289008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,10 +870,10 @@ MonoBehaviour:
   Path: FMOD Project/CakeQuest-2D/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639022051444159894
+  lastModified: 639022103476122109
   FileSizes:
   - Name: Desktop
-    Value: 1492
+    Value: 2406
   Exists: 1
 --- !u!114 &8352665255673867298
 MonoBehaviour:
@@ -397,3 +902,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4780
+--- !u!114 &8369571854948020002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Cake Quest - VS IDK 2
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Cake Quest - VS IDK 2
+  Guid:
+    Data1: 148345167
+    Data2: 1110128851
+    Data3: -477681484
+    Data4: -1583691589
+  Banks:
+  - {fileID: -1267404642713450469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 180035

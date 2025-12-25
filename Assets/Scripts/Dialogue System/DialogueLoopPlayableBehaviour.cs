@@ -9,6 +9,10 @@ public class DialogueLoopPlayableBehaviour : PlayableBehaviour
     bool firstFrame = true;
     public override void ProcessFrame(Playable playable, FrameData info, object playerData)
     {
+        if(Timeline.CurrentlyPlayingTimeline == null)
+        {
+            return;
+        }
         if (firstFrame)
         {
             switch (pauseMethod)

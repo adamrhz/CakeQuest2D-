@@ -10,7 +10,7 @@ public class AnimationController : MonoBehaviour
     private bool Animate = true;
     Movement pm;
     bool isMoving = false;
-    [SerializeField] float animationDeadZone = 0;
+    [SerializeField] float animationDeadZone = 0f;
 
     private void Awake()
     {
@@ -34,41 +34,31 @@ public class AnimationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Animate)
+        if (!Animate) { return; }
+        if (!anim) { return; }
+        bool _isMoving = pm.GetInput().magnitude > animationDeadZone;
+        if (_isMoving != isMoving)
         {
-            if (anim)
-            {
-                bool _isMoving = pm.GetInput().magnitude > animationDeadZone;
-                if (_isMoving != isMoving)
-                {
-                    isMoving = _isMoving;
-                    anim.SetBool("IsMoving", isMoving);
-                   
-                }
-                if (isMoving)
-                {
-                    anim.SetFloat("HorizontalMov", pm.GetInput().x);
-                    anim.SetFloat("VerticalMov", pm.GetInput().y);
-                }
+            isMoving = _isMoving;
+            anim.SetBool("IsMoving", isMoving);
 
-            }
         }
+        if (isMoving)
+        {
+            anim.SetFloat("HorizontalMov", pm.GetInput().x);
+            anim.SetFloat("VerticalMov", pm.GetInput().y);
+        }
+
 
     }
 
 
     public void LookAt(Vector2 direction)
     {
-        if (Animate)
-        {
-
-            if (anim)
-            {
-                anim.SetFloat("HorizontalMov", direction.x);
-                anim.SetFloat("VerticalMov", direction.y);
-            }
-
-        }
+        if (!Animate) { return; }
+        if (!anim) { return; }
+        anim.SetFloat("HorizontalMov", direction.x);
+        anim.SetFloat("VerticalMov", direction.y);
     }
 
 }

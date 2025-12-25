@@ -514,7 +514,7 @@ public class BattleManager : StateMachine<BattleState>
     {
         if (currentBattleInfo.battleInfo.BattleMusic)
         {
-            MusicPlayer.Singleton?.PlaySong(currentBattleInfo.battleInfo.BattleMusic, true);
+            //MusicPlayer.Singleton?.PlaySong(currentBattleInfo.battleInfo.BattleMusic, true);
         }
     }
 

@@ -57,6 +57,7 @@ public class TranslationMenu : MonoBehaviour
 
         if (!LanguageData.Loaded())
         {
+            Debug.Log("Nah");
             StartCoroutine(LanguageData.LoadAllJsonAsync(ResetTextFields));
         }
         else

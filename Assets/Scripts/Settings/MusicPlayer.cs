@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,20 +7,8 @@ using UnityEngine;
 public class MusicPlayer : MonoBehaviour
 {
 
-    private AudioSource audioSource;
     private bool _transitioning = false;
     public float volumeTransitionSpeed = 4f; // Speed at which volume changes
-    public AudioSource AudioSource
-    {
-        get
-        {
-            if (audioSource == null)
-            {
-                audioSource = GetComponent<AudioSource>();
-            }
-            return audioSource;
-        }
-    }
     private static MusicPlayer _singleton;
     public static MusicPlayer Singleton
     {
@@ -60,7 +49,6 @@ public class MusicPlayer : MonoBehaviour
         if (_singleton == null)
         {
             Singleton = this;
-            audioSource = GetComponent<AudioSource>();
             DontDestroyOnLoad(this.gameObject);
         }
         else if (_singleton != this)
@@ -81,68 +69,33 @@ public class MusicPlayer : MonoBehaviour
             AudioClip Song = Resources.Load(fullPath) as AudioClip;
             if (Song != null)
             {
-                PlaySong(Song, loops);
+                //PlaySong(Song, loops);
             }
         }
     }
-
     public static void Stop()
     {
-        Singleton.audioSource.Stop();
+        RAudio.PauseSong();
     }
-
     public static void Resume()
     {
-        Singleton.audioSource.Play();
+        RAudio.ResumeSong();
     }
-
-    public void PlaySong(AudioClip song, bool loops = false)
+    public void PlaySong(EventReference track)
     {
-        StartCoroutine(TransitioningSong(song, loops));
+        StartCoroutine(TransitioningSong(track));
     }
-
-    public void StopCurrentSong()
+    private IEnumerator TransitioningSong(EventReference _track)
     {
-        audioSource.Stop();
-    }
-
-    private IEnumerator TransitioningSong(AudioClip song, bool loops = false)
-    {
-        if (audioSource.clip != song)
+        while (_transitioning)
         {
-
-            while (_transitioning)
-            {
-                yield return null;
-            }
-
-            _transitioning = true;
-
-            // Gradually lower the volume
-            while (audioSource.volume > 0)
-            {
-                audioSource.volume -= volumeTransitionSpeed * Time.deltaTime;
-                yield return null;
-            }
-
-            // Change the clip and play the new song
-            audioSource.Stop();
-            audioSource.clip = song;
-            audioSource.loop = loops;
-            audioSource.Play();
-
-            // Gradually raise the volume
-            while (audioSource.volume < 1)
-            {
-                audioSource.volume += volumeTransitionSpeed * Time.deltaTime;
-                yield return null;
-            }
-
-            audioSource.volume = 1; // Ensure the volume is exactly 1
-            _transitioning = false;
+            yield return null;
         }
+        _transitioning = true;
+        RAudio.StopSong();
+        yield return .5f;
+        RAudio.PlaySong(_track);
+        _transitioning = false;
     }
-
-
 
 }

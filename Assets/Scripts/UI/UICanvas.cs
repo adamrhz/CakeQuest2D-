@@ -106,7 +106,7 @@ public class UICanvas : MonoBehaviour
         if (!videoPlayer.isPlaying)
         {
             dialogueBox.DontGoNext();
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Character>().ToggleCutsceneState();
+            Character.Player.ToggleCutsceneState();
             videoPlayer.prepareCompleted += delegate
             {
                 StartCoroutine(StartAnimatedCutscene());

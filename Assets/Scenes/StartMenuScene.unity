@@ -7203,6 +7203,26 @@ PrefabInstance:
       propertyPath: levelMainTheme
       value: 
       objectReference: {fileID: 8300000, guid: 92d430e7e62dee94eb12082aa93fb71d, type: 3}
+    - target: {fileID: 648596048412152342, guid: 2d989749344f7cc4c91432cc5b08a8b7, type: 3}
+      propertyPath: levelEventReference.Path
+      value: event:/Music/ost_misc_menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 648596048412152342, guid: 2d989749344f7cc4c91432cc5b08a8b7, type: 3}
+      propertyPath: levelEventReference.Guid.Data1
+      value: -1753311889
+      objectReference: {fileID: 0}
+    - target: {fileID: 648596048412152342, guid: 2d989749344f7cc4c91432cc5b08a8b7, type: 3}
+      propertyPath: levelEventReference.Guid.Data2
+      value: 1276776694
+      objectReference: {fileID: 0}
+    - target: {fileID: 648596048412152342, guid: 2d989749344f7cc4c91432cc5b08a8b7, type: 3}
+      propertyPath: levelEventReference.Guid.Data3
+      value: 282802108
+      objectReference: {fileID: 0}
+    - target: {fileID: 648596048412152342, guid: 2d989749344f7cc4c91432cc5b08a8b7, type: 3}
+      propertyPath: levelEventReference.Guid.Data4
+      value: 1415743372
+      objectReference: {fileID: 0}
     - target: {fileID: 648596048412152343, guid: 2d989749344f7cc4c91432cc5b08a8b7, type: 3}
       propertyPath: m_Name
       value: LevelInformation

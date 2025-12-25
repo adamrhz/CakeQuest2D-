@@ -273,4 +273,17 @@ public class Character : MonoBehaviour
         ChangeState(new NothingBehaviour());
     }
 
+    public void CutsceneMoving(Vector3 startPosition, Vector3 destination)
+    {
+        if(Vector3.Distance(startPosition, destination) > 0.01f)
+        {
+            Vector2 direction = (destination - startPosition).normalized;
+            playerMovement?.SetInput(direction);
+
+        }
+        else
+        {
+            playerMovement?.SetInput(Vector3.zero);
+        }
+    }
 }

@@ -380,11 +380,7 @@ public class DialogueBox : MonoBehaviour
         if (lineInfo.voiced && playVoiceLine)
         {
             // Load the audio from Resources folder
-
             PlayLineVoiceClip(lineInfo.lineId);
-
-
-
         }
 
 
@@ -493,6 +489,7 @@ public class DialogueBox : MonoBehaviour
         if (showBoxCoroutine != null) { return; }
         if (!active) { return; }
         if (currentDialogue == null) { return; }
+        if (currentDialogue.dialogue == null) { return; }
 
         if (dialogueIndex >= dialogueLength)
         {
@@ -701,7 +698,8 @@ public class DialogueBox : MonoBehaviour
     {
 
 
-
+        Interactable = false;
+        NavigationBox = false;
         dialogueIndex = 0;
         dialogueText.text = "";
         active = false;

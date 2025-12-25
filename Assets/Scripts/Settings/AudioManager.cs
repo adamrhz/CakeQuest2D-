@@ -18,9 +18,12 @@ public static class RAudio
     public static void FadeStop(string ID) => Stop(ID, FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     public static void Stop(string ID, FMOD.Studio.STOP_MODE mode) => AudioManager.Manager?.Stop(ID, mode);
     public static void StopAllFromBanks(FMOD.Studio.STOP_MODE mode = FMOD.Studio.STOP_MODE.IMMEDIATE, params string[] banks) => AudioManager.Manager?.StopAllFromBanks(mode, banks);
+    public static void PauseSong() => AudioManager.Manager?.PauseSong();
+    public static void ResumeSong() => AudioManager.Manager?.ResumeSong();
 
+    public static void PlaySong(string ID) => AudioManager.Manager?.PlaySong(ID);
     public static void PlaySong(EventReference ID) => AudioManager.Manager?.PlaySong(ID);
-    public static void StopSong() => AudioManager.Manager?.StopSong();
+    public static void StopSong(FMOD.Studio.STOP_MODE mode = FMOD.Studio.STOP_MODE.ALLOWFADEOUT) => AudioManager.Manager?.StopSong(mode);
     public static bool IsPlaying(string ID) => AudioManager.Manager?.IsPlaying(ID) ?? false;
 
     //Param settings for local parameters
@@ -138,7 +141,13 @@ public class AudioManager : MonoBehaviour
             if (AudioManager.Instance != this) Destroy(gameObject);
         }
     }
+    public void PlaySong(string _trackId)
+    {
+        if (string.IsNullOrEmpty(_trackId)){ return; }
 
+
+
+    }
     public void PlaySong(EventReference _track)
     {
         if (!_track.IsNull)
@@ -150,11 +159,27 @@ public class AudioManager : MonoBehaviour
             musicInstance.start();
         }
     }
-    public void StopSong()
+
+    public void PauseSong()
     {
         if (musicInstance.isValid())
         {
-            musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            musicInstance.setPaused(true);
+        }
+    }
+
+    public void ResumeSong()
+    {
+        if (musicInstance.isValid())
+        {
+            musicInstance.setPaused(false);
+        }
+    }
+    public void StopSong(FMOD.Studio.STOP_MODE mode = FMOD.Studio.STOP_MODE.ALLOWFADEOUT)
+    {
+        if (musicInstance.isValid())
+        {
+            musicInstance.stop(mode);
             musicInstance.release();
             musicInstance.clearHandle();
         }
@@ -279,13 +304,15 @@ public class AudioManager : MonoBehaviour
 
     public void StopAllFromBanks(FMOD.Studio.STOP_MODE mode = FMOD.Studio.STOP_MODE.IMMEDIATE, params string[] banks)
     {
+        Debug.Log("Stopping all sounds from banks: " + string.Join(", ", banks));
         foreach (string bank in banks)
         {
             m_bindings.ForEach((b) =>
             {
                 if (banks.ToList().Contains(b.bank))
                 {
-                    m_eventBindings.Find(s => s.id == b.id)?.Inst.stop(mode);
+                    Stop(b.id, mode);
+                    Debug.Log("Stopped sound: " + b.id);
                 }
             });
         }

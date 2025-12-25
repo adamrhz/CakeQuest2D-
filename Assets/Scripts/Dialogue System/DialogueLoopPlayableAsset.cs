@@ -14,7 +14,8 @@ public class DialogueLoopPlayableAsset : PlayableAsset
         return playable;
     }
 }
- 
+
+
 [System.Serializable]
 public enum CutsceneEventMethod
 {
