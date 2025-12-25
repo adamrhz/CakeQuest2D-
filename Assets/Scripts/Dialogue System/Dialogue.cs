@@ -144,15 +144,11 @@ public class Dialogue
 
     public DSDialogueChoiceData[] GetUsableChoicesList()
     {
-        if (DialogueType == DSDialogueType.SingleChoice)
+        if (DialogueType == DSDialogueType.SingleChoice || DialogueChoices == null)
         {
             return null;
         }
         List<DSDialogueChoiceData> returnChocies = new List<DSDialogueChoiceData>();
-        if (DialogueChoices == null)
-        {
-            return null;
-        }
         foreach (DSDialogueChoiceData c in DialogueChoices)
         {
             if (c.NextDialogue == null)

@@ -1,12 +1,22 @@
 {
-    "Data": [
-        {
-            "dataId": "Jimi",
-            "jsonData": "{\"characterName\":\"Jimi\",\"portraits\":\"Portraits/Jimi/po_jimi_neutral_1\",\"HealthName\":\"Vitalité\",\"ManaName\":\"Ingrédients\"}"
-        },
-        {
-            "dataId": "Yankee",
-            "jsonData": "{\"characterName\":\"Yankee\",\"portraits\":\"Portraits/Yankee/po_yankee_neutral_1\",\"HealthName\":\"Vitalité\",\"ManaName\":\"Shampoing\"}"
-        }
-    ]
+  "Data": [
+    {
+      "dataId": "Jimi",
+      "data": {
+        "characterName": "Jimi",
+        "portraits": "Portraits/Jimi/po_jimi_neutral_1",
+        "HealthName": "Vitalité",
+        "ManaName": "Ingrédients"
+      }
+    },
+    {
+      "dataId": "Yankee",
+      "data": {
+        "characterName": "Yankee",
+        "portraits": "Portraits/Yankee/po_yankee_neutral_1",
+        "HealthName": "Vitalité",
+        "ManaName": "Shampoing"
+      }
+    }
+  ]
 }

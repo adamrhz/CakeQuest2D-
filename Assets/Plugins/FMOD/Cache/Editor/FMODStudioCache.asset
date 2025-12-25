@@ -1,0 +1,399 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6619512163418354881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/CakeQuest-2D/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 639022014670974098
+  FileSizes:
+  - Name: Desktop
+    Value: 63680
+  Exists: 1
+--- !u!114 &-6583593622256441508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voices/Cutscenes/Scene_1/Maison/Scene1_Maison_Jimi_001
+  m_EditorClassIdentifier: 
+  Path: event:/Voices/Cutscenes/Scene_1/Maison/Scene1_Maison_Jimi_001
+  Guid:
+    Data1: -240387520
+    Data2: 1218550961
+    Data3: 2097486504
+    Data4: 1706637432
+  Banks:
+  - {fileID: 2141222532119894445}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3343
+--- !u!114 &-5565865042300634780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sounds/UI_Navigate
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/UI_Navigate
+  Guid:
+    Data1: -306391817
+    Data2: 1215106442
+    Data3: 592825237
+    Data4: 943294121
+  Banks:
+  - {fileID: -6619512163418354881}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1333
+--- !u!114 &-3484785945643176242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/CakeQuest-2D/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639022051444119887
+  FileSizes:
+  - Name: Desktop
+    Value: 3160
+  Exists: 1
+--- !u!114 &-2805862510956453212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX Volume
+  m_EditorClassIdentifier: 
+  Name: SFX Volume
+  StudioPath: parameter:/SFX Volume
+  Min: 0
+  Max: 100
+  Default: 50
+  ID:
+    data1: 1812988980
+    data2: 1534205042
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-1267404642713450469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/CakeQuest-2D/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 639022008626852482
+  FileSizes:
+  - Name: Desktop
+    Value: 494
+  Exists: 1
+--- !u!114 &-1123415033706703984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Voice Volume
+  m_EditorClassIdentifier: 
+  Name: Voice Volume
+  StudioPath: parameter:/Voice Volume
+  Min: 0
+  Max: 100
+  Default: 50
+  ID:
+    data1: 764537080
+    data2: 4212890943
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-43891441413137078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sounds/UI_Return
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/UI_Return
+  Guid:
+    Data1: 894940858
+    Data2: 1331303666
+    Data3: -1757476958
+    Data4: -726135495
+  Banks:
+  - {fileID: -6619512163418354881}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 970
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 6784623039437048569}
+  - {fileID: -3484785945643176242}
+  - {fileID: -1267404642713450469}
+  - {fileID: -6619512163418354881}
+  - {fileID: 2141222532119894445}
+  EditorEvents:
+  - {fileID: 6766819106814480778}
+  - {fileID: -43891441413137078}
+  - {fileID: -5565865042300634780}
+  - {fileID: 8352665255673867298}
+  - {fileID: -6583593622256441508}
+  - {fileID: 6304852678569057132}
+  - {fileID: 4705440741742289008}
+  EditorParameters:
+  - {fileID: 2056703608423699620}
+  - {fileID: -2805862510956453212}
+  - {fileID: -1123415033706703984}
+  MasterBanks:
+  - {fileID: -3484785945643176242}
+  StringsBanks:
+  - {fileID: 6784623039437048569}
+  cacheTime: 639022051444589994
+  cacheVersion: 131634
+--- !u!114 &2056703608423699620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music Volume
+  m_EditorClassIdentifier: 
+  Name: Music Volume
+  StudioPath: parameter:/Music Volume
+  Min: 0
+  Max: 100
+  Default: 50
+  ID:
+    data1: 3389794039
+    data2: 1591969001
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &2141222532119894445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Voices.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/CakeQuest-2D/Build/Desktop/Voices.bank
+  Name: Voices
+  StudioPath: bank:/Voices
+  lastModified: 639022051444589994
+  FileSizes:
+  - Name: Desktop
+    Value: 170016
+  Exists: 1
+--- !u!114 &4705440741742289008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voices/Cutscenes/Scene_1/Maison/Scene1_Maison_Jimi_003
+  m_EditorClassIdentifier: 
+  Path: event:/Voices/Cutscenes/Scene_1/Maison/Scene1_Maison_Jimi_003
+  Guid:
+    Data1: 1668163554
+    Data2: 1122990020
+    Data3: -332126321
+    Data4: 20116089
+  Banks:
+  - {fileID: 2141222532119894445}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3578
+--- !u!114 &6304852678569057132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voices/Cutscenes/Scene_1/Maison/Scene1_Maison_Jimi_004
+  m_EditorClassIdentifier: 
+  Path: event:/Voices/Cutscenes/Scene_1/Maison/Scene1_Maison_Jimi_004
+  Guid:
+    Data1: 141776332
+    Data2: 1133105101
+    Data3: 792496784
+    Data4: -1137550790
+  Banks:
+  - {fileID: 2141222532119894445}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3500
+--- !u!114 &6766819106814480778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sounds/UI_Confirm
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/UI_Confirm
+  Guid:
+    Data1: -1660598679
+    Data2: 1178792697
+    Data3: -1727394133
+    Data4: -1844445680
+  Banks:
+  - {fileID: -6619512163418354881}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 970
+--- !u!114 &6784623039437048569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/CakeQuest-2D/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639022051444159894
+  FileSizes:
+  - Name: Desktop
+    Value: 1492
+  Exists: 1
+--- !u!114 &8352665255673867298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voices/Cutscenes/Scene_1/Maison/Scene1_Maison_Jimi_002
+  m_EditorClassIdentifier: 
+  Path: event:/Voices/Cutscenes/Scene_1/Maison/Scene1_Maison_Jimi_002
+  Guid:
+    Data1: -113756143
+    Data2: 1198231387
+    Data3: 1507113907
+    Data4: 787390095
+  Banks:
+  - {fileID: 2141222532119894445}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4780

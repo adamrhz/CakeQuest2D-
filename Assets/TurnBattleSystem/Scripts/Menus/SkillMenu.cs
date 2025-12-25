@@ -44,7 +44,7 @@ public class SkillMenu : ChoiceMenu
         else
         {
             BattleManager.Singleton.GetActor().currentCommand = attackCommand;
-            BattleManager.Singleton.ChangeState(new ChoosingTargetState());
+            BattleManager.Singleton.Set<ChoosingTargetState>();
         }
     }
 }

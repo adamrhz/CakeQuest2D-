@@ -196,8 +196,7 @@ public class LanguageData
             Debug.LogError($"Loaded asset is not a TextAsset for {languageSuffix}");
         }
         LanguageData combinedData = new LanguageData();
-
-        LanguageData data = JsonUtility.FromJson<LanguageData>(jsonFile.text);
+        LanguageData data = JsonConvert.DeserializeObject<LanguageData>(jsonFile.text);
         if (data != null)
         {
             if (data.Data != null)
@@ -216,7 +215,7 @@ public class LanguageData
     }
     public static LanguageData LoadLocalData(string path, JsonDataType filter = JsonDataType.None)
     {
-        
+
 
         LanguageData combinedData = new LanguageData();
         try
@@ -228,7 +227,7 @@ public class LanguageData
             {
                 Debug.LogError($"Loaded asset is not a TextAsset for {path}");
             }
-            LanguageData data = JsonUtility.FromJson<LanguageData>(jsonFile);
+            LanguageData data = JsonConvert.DeserializeObject<LanguageData>(jsonFile);
             if (data != null)
             {
 
@@ -304,7 +303,7 @@ public class LanguageData
                 try
                 {
 
-                    LanguageData data = JsonUtility.FromJson<LanguageData>(file.text);
+                    LanguageData data = JsonConvert.DeserializeObject<LanguageData>(file.text);
                     if (data != null)
                     {
                         if (data.Data != null)
@@ -326,7 +325,7 @@ public class LanguageData
             yield return null;
         }
 
-        ResourceRequest request =  Resources.LoadAsync<TextAsset>(colorFolder);
+        ResourceRequest request = Resources.LoadAsync<TextAsset>(colorFolder);
 
         while (!request.isDone)
         {
@@ -339,7 +338,7 @@ public class LanguageData
             try
             {
 
-                LanguageData data = JsonUtility.FromJson<LanguageData>(colorFileAsset.text);
+                LanguageData data = JsonConvert.DeserializeObject<LanguageData>(colorFileAsset.text);
                 if (data != null)
                 {
                     if (data.globalColors != null)
@@ -384,7 +383,7 @@ public class LanguageData
         }
         LanguageData combinedData = new LanguageData();
 
-        LanguageData data = JsonUtility.FromJson<LanguageData>(jsonFile.text);
+        LanguageData data = JsonConvert.DeserializeObject<LanguageData>(jsonFile.text);
         if (data != null)
         {
             if (data.Data != null)
@@ -412,7 +411,7 @@ public class LanguageData
             return value;
         }
         Debug.LogWarning($"Key '{id}' not found in Translation File data.");
-        return new JsonData(id, "");
+        return new JsonData(id);
     }
 
 
@@ -420,18 +419,18 @@ public class LanguageData
     {
         if (Singleton == null)
         {
-            return new JsonData(id, "");
+            return new JsonData(id);
         }
         if (Singleton.translationData == null)
         {
-            return new JsonData(id, "");
+            return new JsonData(id);
         }
         if (Singleton.translationData.TryGetValue(id, out JsonData value))
         {
             return value;
         }
         Debug.LogWarning($"Key '{id}' not found in Translation File data.");
-        return new JsonData(id, "");
+        return new JsonData(id);
     }
 }
 
@@ -458,53 +457,63 @@ public enum JsonDataType
 public class JsonData
 {
     public string dataId;
-    public string jsonData;
+    public Dictionary<string, string> data = new();
+    //public string jsonData;
 
-
-    public JsonData(string id, string data)
+    public JsonData()
+    {
+        data = new Dictionary<string, string>();
+    }
+    public JsonData(string id, Dictionary<string, string> dict)
+    {
+        dataId = id;
+        data = dict ?? new Dictionary<string, string>();
+    }
+    public JsonData(string id)
     {
         this.dataId = id;
-        this.jsonData = data;
+        data = new Dictionary<string, string>();
     }
 
     public JsonData(string id, JsonDataType t, string data)
     {
         this.dataId = id;
-        this.jsonData = data;
+        //this.jsonData = data;
     }
     public bool ContainsKey(string key)
     {
-        if (string.IsNullOrEmpty(jsonData))
-        {
-            Debug.LogWarning("jsonData is null or empty.");
-        }
-        else
-        {
+        return data != null && data.ContainsKey(key);
+        //if (string.IsNullOrEmpty(jsonData))
+        //{
+        //    Debug.LogWarning("jsonData is null or empty.");
+        //}
+        //else
+        //{
 
 
-            try
-            {
-                // Deserialize the jsonData string into a SerializableDictionary
-                Dictionary<string, string> values = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonData);
+        //    try
+        //    {
+        //        // Deserialize the jsonData string into a SerializableDictionary
+        //        Dictionary<string, string> values = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonData);
 
-                if (values.TryGetValue(key, out string value))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+        //        if (values.TryGetValue(key, out string value))
+        //        {
+        //            return true;
+        //        }
+        //        else
+        //        {
+        //            return false;
+        //        }
 
-            }
-            catch (Exception e)
-            {
-                Debug.LogError($"Error parsing JSON data: {e.Message}");
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Debug.LogError($"Error parsing JSON data: {e.Message}");
 
-            }
-        }
+        //    }
+        //}
 
-        return false;
+        //return false;
     }
     public string GetValueByKey(string key, bool nullable = true)
     {
@@ -515,62 +524,41 @@ public class JsonData
             returnValue = $"{dataId}.{key}";
 
         }
-        if (string.IsNullOrEmpty(jsonData))
+
+        if (data != null && data.TryGetValue(key, out string value))
         {
-            Debug.LogWarning("jsonData is null or empty.");
+            // Replace <sprite name=something> with <sprite name=something_else>
+            string pattern = @"<sprite name=([\w\d_]+)>";
+            string replacedText = Regex.Replace(value, pattern, match =>
+            {
+                string originalName = match.Groups[1].Value;
+                string newName = $"{originalName}_{InputManager.controlSettings}"; // Example replacement
+                return $"<sprite name={newName}>";
+            });
+
+            // Replace {colorName} placeholders with corresponding values from GlobalColors
+            pattern = @"\{color_([\w\d_]+)\}";
+            replacedText = Regex.Replace(replacedText, pattern, match =>
+            {
+                string placeholder = match.Groups[1].Value;
+                if (LanguageData.Singleton.GlobalColors.TryGetValue(placeholder, out string colorValue))
+                {
+                    return colorValue;
+                }
+                return match.Value;
+            });
+            returnValue = replacedText;
         }
         else
         {
-
-
-            try
-            {
-                // Deserialize the jsonData string into a SerializableDictionary
-                Dictionary<string, string> values = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonData);
-
-                if (values.TryGetValue(key, out string value))
-                {
-                    // Replace <sprite name=something> with <sprite name=something_else>
-                    string pattern = @"<sprite name=([\w\d_]+)>";
-                    string replacedText = Regex.Replace(value, pattern, match =>
-                    {
-                        string originalName = match.Groups[1].Value;
-                        string newName = $"{originalName}_{InputManager.controlSettings}"; // Example replacement
-                    return $"<sprite name={newName}>";
-                    });
-
-                    // Replace {colorName} placeholders with corresponding values from GlobalColors
-                    pattern = @"\{color_([\w\d_]+)\}";
-                    replacedText = Regex.Replace(replacedText, pattern, match =>
-                    {
-                        string placeholder = match.Groups[1].Value;
-                        if (LanguageData.Singleton.GlobalColors.TryGetValue(placeholder, out string colorValue))
-                        {
-                            return colorValue;
-                        }
-                        return match.Value;
-                    });
-                    returnValue = replacedText;
-                }
-                else
-                {
-                    Debug.LogWarning($"Key '{key}' not found in JSON data.");
-                    if (key == "line")
-                    {
-                        returnValue = $"No Line Found with Key '{dataId} | {key}'";
-                    }
-                }
-
-            }
-            catch (Exception e)
-            {
-                Debug.LogError($"Error parsing JSON data: {e.Message}");
-
-            }
+            Debug.LogWarning($"Key '{key}' not found in '{dataId}'");
+            if (key == "line")
+                returnValue = $"No Line Found with Key '{dataId} | {key}'";
         }
-
         return returnValue;
     }
+
+
 
 
 }

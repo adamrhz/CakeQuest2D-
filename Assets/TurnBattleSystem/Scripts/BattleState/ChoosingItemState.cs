@@ -8,10 +8,6 @@ public class ChoosingItemState : ChoosingSkillState
     {
         MenuName = "ItemMenu";
     }
-    public override void OnEnter(BattleManager _battleManager)
-    {
-        base.OnEnter(_battleManager);
-    }
 
 
 

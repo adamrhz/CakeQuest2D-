@@ -9,14 +9,15 @@ public class ChoosingTargetState : BattleState
     public List<BattleCharacter> target = new List<BattleCharacter>();
     public List<BattleCharacter> possibleTarget;
     int targetIndex = 0;
-    public override void OnEnter(BattleManager _battleManager)
+    public override void OnEnter()
     {
-        base.OnEnter(_battleManager);
+        multiple = false;
+        base.OnEnter();
 
         battleManager.SetCursor(null);
         if (battleManager.GetActor().currentCommand == null)
         {
-            battleManager.ChangeState(new ChoosingActionState());
+            battleManager.Set<ChoosingActionState>();
         }
         else
         {
@@ -42,7 +43,7 @@ public class ChoosingTargetState : BattleState
             possibleTarget = battleManager.GetPossibleTarget();
             if (possibleTarget.Count == 0)
             {
-                battleManager.ChangeState(new ChoosingActionState());
+                battleManager.Set<ChoosingActionState>();
             }
             else
             {
@@ -90,14 +91,14 @@ public class ChoosingTargetState : BattleState
     }
 
 
-    public override void Handle()
+    public override void OnUpdate()
     {
-        base.Handle();
+        base.OnUpdate();
     }
     public override void OnSelect()
     {
         battleManager.GetActor().currentCommand.SetTarget(target);
-        battleManager.ChangeState(new PerformActionState());
+        battleManager.Set<PerformActionState>();
         base.OnSelect();
     }
 
@@ -105,15 +106,15 @@ public class ChoosingTargetState : BattleState
     {
         if (battleManager.GetActor().currentCommand is SkillCommand)
         {
-            battleManager.ChangeState(new ChoosingSkillState());
+            battleManager.Set<ChoosingSkillState>();
         }
         else if (battleManager.GetActor().currentCommand.GetType() == typeof(AttackCommand))
         {
-            battleManager.ChangeState(new ChoosingActionState());
+            battleManager.Set<ChoosingActionState>();
         }
         else if (battleManager.GetActor().currentCommand.GetType() == typeof(ItemCommand))
         {
-            battleManager.ChangeState(new ChoosingItemState());
+            battleManager.Set<ChoosingItemState>();
         }
         base.OnBack();
     }

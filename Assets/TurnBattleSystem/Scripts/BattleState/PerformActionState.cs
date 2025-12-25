@@ -11,9 +11,9 @@ public class PerformActionState : BattleState
     {
         MenuName = "ChainMenu";
     }
-    public override void OnEnter(BattleManager _battleManager)
+    public override void OnEnter()
     {
-        base.OnEnter(_battleManager);
+        base.OnEnter();
         battleManager.SetCursor(null);
 
         performer = battleManager.GetActor();
@@ -32,7 +32,7 @@ public class PerformActionState : BattleState
 
 
 
-    public override void Handle()
+    public override void OnUpdate()
     {
 
     }

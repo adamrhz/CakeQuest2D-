@@ -1,180 +1,337 @@
 {
-    "Data": [
-        {
-            "dataId": "Scene1_Maison_Jimi_001",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"I'm so hungry... I wonder if there's any cake left.\"}"
-        },
-        {
-            "dataId": "Scene1_Maison_Jimi_002",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/portrait_jimi_angry\",\"talkerName\":\"Jimi\",\"line\":\"This fat ass... Dad ate it all.\"}"
-        },
-        {
-            "dataId": "Scene1_Maison_Jimi_003",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Well, I dont have a choice. I have to bake another one. There should be ingredients left.\"}"
-        },
-        {
-            "dataId": "Scene1_Maison_Jimi_004",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Alright, this should be enough. To the <color={color_success}>oven</color>!.\"}"
-        },
-        {
-            "dataId": "Scene1_Maison_Jimi_005",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Bake at 180 degrees for 30 minutes… Hmm.. I don't really have time for this shit.\"}"
-        },
-        {
-            "dataId": "Scene1_Maison_Jimi_006",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"According to my calculations... if I bake it at 324 000 degrees, it will be baked in ONE second!\"}"
-        },
-        {
-            "dataId": "Scene1_Maison_Jimi_007",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"I'm such a genius.\"}"
-        },
-        {
-            "dataId": "Scene1_Maison_Jimi_008",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Oh no… Dad's gonna kill me.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_001",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Jimi…<waitSec=0.8> Wake up...\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_002",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Wake up Jimi.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_003",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"…\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_004",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Ngh…<waitSec=0.8> 5 more minutes...\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_005",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Jimi...\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_006",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"….\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_007",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"OH<waitSec=0.6> WAKE UP!!\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_008",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Whaaaaat?!\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_009",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Oh,<waitSec=0.4> what the hell is this?\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_010",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Listen to me Jimi…<waitSec=0.8> You actually messed everything up.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_011",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"What do you mean?\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_012",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"No like you actually<waitSec=0.2> MESSED<waitSec=0.2> everything up.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_013",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"What did I do?\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_014",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Like, if there was a guinees world record of the biggest idiot ever,<waitSec=0.4> you'd be undethronable.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_015",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"…\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_016",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Honestly<waitSec=0.4>, i don't even know how you look at yourself in the mirro-<skipLine>\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_017",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"OKAY I GET IT! Tell me what happened or i'm going back to bed.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_0180",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Okay,<waitSec=0.3>, i overdid it...<waitSec=0.8> Let's get straight to it.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_0181",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"T’as détruit le monde.<waitSec=0.3> Et c’est à toi de le sauver.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_019",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"…Ouais<waitSec=0.1> nan<waitSec=0.2>, j’ai pas le temps pour ça.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_020",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Zzzz\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_021",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"…\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_022",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Tu veux pas ton gâteau en fait?\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_023",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Gâteau?! Où ça?\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_024",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Calme-toi. Je sais où il est.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_025",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Bon bah super,<waitSec=0.3> rends-le-moi alors.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_026",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"J’aimerais bien,<waitSec=0.5> mais je peux pas trop.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_027",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Pourquoi?\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_028",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Ton gâteau est dans un autre monde.<waitSec=0.3> Sans lui<waitSec=0.3>, ton monde est perdu.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_029",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Attends répète<waitSec=0.3>, j’ai pas compris.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_030",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Ton gâteau est dans un autre monde.<waitSec=0.3> Et si tu le récup-<skipLine>\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_031",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Hein?\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_032",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"TON GÂTEAU<waitSec=0.2> EST DANS<waitSec=0.2> UN AUTRE MONDE-<skipLine>\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_033",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Mon gâteau?<waitSec=0.5> Attends recommence depuis le début.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_034",
-            "jsonData": "{\"talkerName\":\"Voices mystérieuse\",\"line\":\"Vas-y, dégage.\"}"
-        },
-        {
-            "dataId": "Scene2_Limbo_035",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"NON<waitSec=0.1> ATTENDS!\"}"
-        }
-    ]
+  "Data": [
+    {
+      "dataId": "Scene1_Maison_Jimi_001",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "I'm so hungry... I wonder if there's any cake left."
+      }
+    },
+    {
+      "dataId": "Scene1_Maison_Jimi_002",
+      "data": {
+        "portraitPath": "Portraits/Jimi/portrait_jimi_angry",
+        "talkerName": "Jimi",
+        "line": "This fat ass... Dad ate it all."
+      }
+    },
+    {
+      "dataId": "Scene1_Maison_Jimi_003",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Well, I dont have a choice. I have to bake another one. There should be ingredients left."
+      }
+    },
+    {
+      "dataId": "Scene1_Maison_Jimi_004",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Alright, this should be enough. To the <color={color_success}>oven</color>!."
+      }
+    },
+    {
+      "dataId": "Scene1_Maison_Jimi_005",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Bake at 180 degrees for 30 minutes… Hmm.. I don't really have time for this shit."
+      }
+    },
+    {
+      "dataId": "Scene1_Maison_Jimi_006",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "According to my calculations... if I bake it at 324 000 degrees, it will be baked in ONE second!"
+      }
+    },
+    {
+      "dataId": "Scene1_Maison_Jimi_007",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "I'm such a genius."
+      }
+    },
+    {
+      "dataId": "Scene1_Maison_Jimi_008",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Oh no… Dad's gonna kill me."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_001",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "Jimi…<waitSec=0.8> Wake up..."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_002",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "Wake up Jimi."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_003",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "…"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_004",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Ngh…<waitSec=0.8> 5 more minutes..."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_005",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "Jimi..."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_006",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "…."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_007",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "OH<waitSec=0.6> WAKE UP!!"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_008",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Whaaaaat?!"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_009",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Oh,<waitSec=0.4> what the hell is this?"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_010",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "Listen to me Jimi…<waitSec=0.8> You actually messed everything up."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_011",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "What do you mean?"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_012",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "No like you actually<waitSec=0.2> MESSED<waitSec=0.2> everything up."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_013",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "What did I do?"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_014",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "Like, if there was a guinees world record of the biggest idiot ever,<waitSec=0.4> you'd be undethronable."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_015",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "…"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_016",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "Honestly<waitSec=0.4>, i don't even know how you look at yourself in the mirro-<skipLine>"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_017",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "OKAY I GET IT! Tell me what happened or i'm going back to bed."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_0180",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "Okay,<waitSec=0.3>, i overdid it...<waitSec=0.8> Let's get straight to it."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_0181",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "T’as détruit le monde.<waitSec=0.3> Et c’est à toi de le sauver."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_019",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "…Ouais<waitSec=0.1> nan<waitSec=0.2>, j’ai pas le temps pour ça."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_020",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Zzzz"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_021",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "…"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_022",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "Tu veux pas ton gâteau en fait?"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_023",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Gâteau?! Où ça?"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_024",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "Calme-toi. Je sais où il est."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_025",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Bon bah super,<waitSec=0.3> rends-le-moi alors."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_026",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "J’aimerais bien,<waitSec=0.5> mais je peux pas trop."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_027",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Pourquoi?"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_028",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "Ton gâteau est dans un autre monde.<waitSec=0.3> Sans lui<waitSec=0.3>, ton monde est perdu."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_029",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Attends répète<waitSec=0.3>, j’ai pas compris."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_030",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "Ton gâteau est dans un autre monde.<waitSec=0.3> Et si tu le récup-<skipLine>"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_031",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Hein?"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_032",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "TON GÂTEAU<waitSec=0.2> EST DANS<waitSec=0.2> UN AUTRE MONDE-<skipLine>"
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_033",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Mon gâteau?<waitSec=0.5> Attends recommence depuis le début."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_034",
+      "data": {
+        "talkerName": "Voices mystérieuse",
+        "line": "Vas-y, dégage."
+      }
+    },
+    {
+      "dataId": "Scene2_Limbo_035",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "NON<waitSec=0.1> ATTENDS!"
+      }
+    }
+  ]
 }

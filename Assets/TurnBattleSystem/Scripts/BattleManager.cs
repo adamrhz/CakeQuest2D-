@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
-public class BattleManager : MonoBehaviour
+public class BattleManager : StateMachine<BattleState>
 {
     private static BattleManager _singleton;
     public static BattleManager Singleton
@@ -50,6 +50,7 @@ public class BattleManager : MonoBehaviour
     public GameObject KOKUSEN;
     public GameObject KOKUSENSPEEDLINES;
     public GameObject KOKUSENAURA;
+    public GameObject CookingMiniGamePrefab;
 
 
 
@@ -81,7 +82,6 @@ public class BattleManager : MonoBehaviour
     public static float DestroyTime = 1.4f;
     [SerializeField] Party HeroParty;
     [SerializeField] Party EnemyParty;
-    private BattleState BattleState;
     public List<BattleCharacter> HeroPartyActors;
     public List<BattleCharacter> EnemyPartyActors;
     public List<BattleCharacter> Actors;
@@ -269,7 +269,7 @@ public class BattleManager : MonoBehaviour
     }
     internal bool IsObserving()
     {
-        return BattleState.GetType() == typeof(AnalyzingTargetState);
+        return CurrentState.GetType() == typeof(AnalyzingTargetState);
     }
 
     public List<BattleCharacter> GetCurrentTarget()
@@ -353,8 +353,33 @@ public class BattleManager : MonoBehaviour
     private void Awake()
     {
         Singleton = this;
+        Add(new AnalyzingTargetState());
+        Add(new ChoosingActionState());
+        Add(new PerformActionState());
+        Add(new CutsceneState());
+        Add(new NothingState());
+        Add(new ChoosingSkillState());
+        Add(new ChoosingItemState());
+        Add(new ChoosingTargetState());
+        Add(new SwapingState());
+        Add(new CookingState());
+    }
+    public override void Add(BattleState state)
+    {
+        state.SetBattleManager(this);
+        base.Add(state);
     }
 
+
+    public override void Set<T>()
+    {
+        base.Set<T>();
+        base.CurrentState.ShowControls();
+        if (DebugBattleStateText != null)
+        {
+            DebugBattleStateText.text = base.CurrentState.GetType().ToString();
+        }
+    }
     public void AddActor(BattleCharacter actor)
     {
         if (!Actors.Contains(actor))
@@ -480,7 +505,7 @@ public class BattleManager : MonoBehaviour
 
     public void PlayCutscene()
     {
-        ChangeState(new NothingState());
+        Set<NothingState>();
         timeline.ResetPlayed();
         timeline.SetCutscene(currentBattleInfo.battleInfo.CutsceneForDialogue);
     }
@@ -493,17 +518,7 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-    public void ChangeState(BattleState state)
-    {
 
-        BattleState?.OnExit();
-        BattleState = state;
-        BattleState.OnEnter(this);
-        if (DebugBattleStateText != null)
-        {
-            DebugBattleStateText.text = BattleState.GetType().ToString();
-        }
-    }
     private void SpawnPartyCards()
     {
         foreach (BattleCharacter actor in Actors)
@@ -532,30 +547,30 @@ public class BattleManager : MonoBehaviour
 
     private void Update()
     {
-        BattleState?.Handle();
+        CurrentState?.OnUpdate();
         HandleInputs();
     }
     public virtual void HandleInputs()
     {
         if (InputManager.inputManager.GetAxis2DDown(ButtonName.Move))
         {
-            BattleState?.OnNavigate(InputManager.inputManager.GetAxis2D(ButtonName.Move));
+            CurrentState?.OnNavigate(InputManager.inputManager.GetAxis2D(ButtonName.Move));
         }
         if (InputManager.inputManager.GetButtonDown(ButtonName.Interact))
         {
-            BattleState?.OnSelect();
+            CurrentState?.OnSelect();
         }
         if (InputManager.inputManager.GetButtonDown(ButtonName.SecondAct))
         {
-            BattleState?.OnBack();
+            CurrentState?.OnBack();
         }
         if (InputManager.inputManager.GetButtonUp(ButtonName.Interact))
         {
-            BattleState?.OnSelectReleased();
+            CurrentState?.OnSelectReleased();
         }
         if (InputManager.inputManager.GetButtonUp(ButtonName.SecondAct))
         {
-            BattleState?.OnBackReleased();
+            CurrentState?.OnBackReleased();
         }
     }
     public void SetCursor(BattleCharacter character, bool resetCursors = true)
@@ -767,7 +782,7 @@ public class BattleManager : MonoBehaviour
     public IEnumerator EndBattleCountDown(bool battleWon)
     {
         Time.timeScale = .3f;
-        ChangeState(new NothingState());
+        Set<NothingState>();
         foreach (BattleCharacter character in Actors)
         {
             if (character.GetTeam() == TeamIndex.Player)
@@ -804,7 +819,7 @@ public class BattleManager : MonoBehaviour
 
     public void StartingDialogue()
     {
-        ChangeState(new CutsceneState());
+        Set<CutsceneState>();
         timeline.StartDialogue();
     }
 
@@ -874,7 +889,7 @@ public class BattleManager : MonoBehaviour
             {
                 GetActor().currentCommand = new DeadCommand();
                 GetActor().currentCommand.SetSource(GetActor());
-                ChangeState(new PerformActionState());
+                Set<PerformActionState>();
             }
             else
             {
@@ -888,14 +903,14 @@ public class BattleManager : MonoBehaviour
                 if (GetActor().IsPlayerTeam())
                 {
 
-                    ChangeState(new ChoosingActionState());
+                    Set<ChoosingActionState>();
                 }
                 else
                 {
                     GetActor().currentCommand = GetActor().CreateCommand();
                     GetActor().currentCommand.SetSource(GetActor());
                     GetActor().currentCommand.SetTarget(GetRandomTargets());
-                    ChangeState(new PerformActionState());
+                    Set<PerformActionState>();
 
                 }
             }

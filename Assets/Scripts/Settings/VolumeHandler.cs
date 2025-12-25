@@ -7,7 +7,6 @@ using TMPro;
 
 public class VolumeHandler : MonoBehaviour
 {
-    [SerializeField] AudioMixer contextMixer;
     [SerializeField] Slider contextSlider;
     [SerializeField] bool SFX;
     [SerializeField] bool Music;
@@ -44,43 +43,49 @@ public class VolumeHandler : MonoBehaviour
     }
     public void SetVolume(float volume)
     {
-        contextMixer.SetFloat("Volume", volume);
-
-        float value = volume + 50f;
-        value /= (contextSlider.maxValue - contextSlider.minValue);
-        value *= 100;
-        value = (int)value;
+        float value = volume; ;
         volumeText.SetText($"{(int)value}%");
         if (SFX)
         {
-            SetSFXPreference((int)volume);
+            SetSFXPreference((int)value);
         }
         else if (Music)
         {
-            SetMusicPreference((int)volume);
+            SetMusicPreference((int)value);
 
         }
         else if (Voice)
         {
-            SetVoicePreference((int)volume);
+            SetVoicePreference((int)value);
 
         }
-    }
+        ApplySoundPrefs();
 
+    }
+    public static void ApplySoundPrefs()
+    {
+        RAudio.GSetValueParam("Music Volume", GamePreference.MusicVolume); // Call the static method directly
+        RAudio.GSetValueParam("SFX Volume", GamePreference.SFXVolume); // Call the static method directly
+        RAudio.GSetValueParam("Voice Volume", GamePreference.VoiceVolume); // Call the static method directly
+
+    }
 
 
     public void SetSFXPreference(int volume)
     {
         GamePreference.SFXVolume = volume;
+        ApplySoundPrefs();
     }
     public void SetMusicPreference(int volume)
     {
         GamePreference.MusicVolume = volume;
+        ApplySoundPrefs();
 
     }
     public void SetVoicePreference(int volume)
     {
         GamePreference.VoiceVolume = volume;
+        ApplySoundPrefs();
 
     }
 }

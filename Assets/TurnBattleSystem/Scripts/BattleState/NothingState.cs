@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class NothingState : BattleState
 {
-    public override void OnEnter(BattleManager _battleManager)
+    public override void OnEnter()
     {
-        base.OnEnter(_battleManager);
+        base.OnEnter();
         battleManager.SetCursor(null);
     }
 
 
-    public override void Handle()
+    public override void OnUpdate()
     {
-        base.Handle();
+        base.OnUpdate();
     }
 
 

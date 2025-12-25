@@ -30,6 +30,15 @@ public class DialogueContent
         this.dialogue = dialogue;
 
     }
+    public bool WillBeChoices()
+    {
+        if (dialogue == null) { return false; }
+        if (dialogue.DialogueChoices == null) { return false; }
+        if (dialogue.DialogueChoices.Length == 0) { return false; }
+        if (dialogue.GetUsableChoicesList() == null) { return false; }
+        if (dialogue.GetUsableChoicesList().Length <= 1) { return false; }
+        return true;
+    }
 }
 
 
@@ -91,8 +100,8 @@ public class DialogueBox : MonoBehaviour
 
 
     [Header("Attributes")]
-    [SerializeField] [Range(0.1f, 1)] float apparitionTime = .4f;
-    [SerializeField] [Range(5, 60)] int textCharPerSecond = 30;
+    [SerializeField][Range(0.1f, 1)] float apparitionTime = .4f;
+    [SerializeField][Range(5, 60)] int textCharPerSecond = 30;
 
 
 
@@ -157,9 +166,6 @@ public class DialogueBox : MonoBehaviour
             AddInteractEventToPlayer(true);
             Interact();
         }
-    }
-    private void Update()
-    {
     }
 
     public void CancelDialogue()
@@ -276,7 +282,7 @@ public class DialogueBox : MonoBehaviour
 
                     if (playerObject == null)
                     {
-                        Player = GameObject.FindGameObjectWithTag("Player");
+                        Player = Character.Player.gameObject;
                     }
                     else
                     {
@@ -289,19 +295,14 @@ public class DialogueBox : MonoBehaviour
                         if (Player)
                         {
                             Player.GetComponent<Character>().ChangeState(new InteractingBehaviour());
-                            AddInteractEventToPlayer(true);
                             if (originObject)
                             {
                                 Player.GetComponent<Character>().LookAt(originObject);
                             }
                         }
                     }
-                    else if (currentState == GameState.BattleScene)
-                    {
-                        AddInteractEventToPlayer(true);
 
-                    }
-
+                    AddInteractEventToPlayer(true);
 
 
                     currentDialogue = newDialogue;
@@ -325,6 +326,7 @@ public class DialogueBox : MonoBehaviour
 
     private void TriggerInstantOverEvents(Dialogue dialogue)
     {
+        if (dialogue == null) { return; }
         UnityAction action = GetEventFromIndex(dialogue.EventIndex, DialogueEventType.Instant);
         if (action != null)
         {
@@ -396,6 +398,17 @@ public class DialogueBox : MonoBehaviour
 
     public async void PlayLineVoiceClip(string lineId)
     {
+
+
+        RAudio.StopAllFromBanks(FMOD.Studio.STOP_MODE.IMMEDIATE, "Voices");
+        if (!string.IsNullOrEmpty(lineId))
+        {
+            RAudio.PlayOneShot(lineId);
+            Debug.Log("Playing voice line via RAudio");
+        }
+        return;
+
+
         AudioClip voiceLine = await Utils.GetVoiceLine(lineId);
 
         if (voiceLine != null)
@@ -438,7 +451,6 @@ public class DialogueBox : MonoBehaviour
 
         ClearChoiceBox();
         AddInteractEventToPlayer(false);
-        AddNavigateEventToPlayer(true);
         choiceBox.SetActive(true);
         for (int i = 0; i < choices.Length; i++)
         {
@@ -456,6 +468,7 @@ public class DialogueBox : MonoBehaviour
 
         }
         choiceBox.GetComponent<ChoiceMenu>().DefaultSelect();
+        AddNavigateEventToPlayer(true);
     }
 
     public void FlipPortrait()
@@ -476,106 +489,65 @@ public class DialogueBox : MonoBehaviour
 
     public void Interact()
     {
-        if (showBoxCoroutine == null)
+        int dialogueLength = currentDialogue?.dialogue?.dialogueLineIds?.Length ?? 0;
+        if (showBoxCoroutine != null) { return; }
+        if (!active) { return; }
+        if (currentDialogue == null) { return; }
+
+        if (dialogueIndex >= dialogueLength)
         {
 
-            if (active)
+            TriggerInstantOverEvents(currentDialogue?.dialogue);
+
+            if (dontGoNext)
             {
-                int dialogueLength = 0;
-                if (currentDialogue.dialogue.dialogueLineIds != null)
-                {
-                    dialogueLength = currentDialogue.dialogue.dialogueLineIds.Length;
-                }
-                if (dialogueIndex >= dialogueLength)
-                {
+                dontGoNext = false;
+                return;
+            }
 
-                    if (currentDialogue != null)
-                    {
-                        TriggerInstantOverEvents(currentDialogue.dialogue);
-                    }
 
-                    if (dontGoNext)
+            DSDialogueChoiceData[] choicesList = currentDialogue.dialogue.GetUsableChoicesList();
+            if (choicesList != null)
+            {
+                if (choicesList.Length == 1)
+                {
+                    if (choicesList[0].NextDialogue.ConditionRespected())
                     {
-                        dontGoNext = false;
+                        dialogueWaitingLine.Insert(0, new DialogueContent(new Dialogue(choicesList[0].NextDialogue)));
+                        StartNextDialogueWaiting();
                         return;
                     }
-                    else if (currentDialogue != null)
-                    {
-
-
-
-
-                        DSDialogueChoiceData[] choicesList = currentDialogue.dialogue.GetUsableChoicesList();
-                        if (choicesList != null)
-                        {
-                            if (choicesList.Length == 1)
-                            {
-                                if (choicesList[0].NextDialogue.ConditionRespected())
-                                {
-                                    dialogueWaitingLine.Insert(0, new DialogueContent(new Dialogue(choicesList[0].NextDialogue)));
-                                    StartNextDialogueWaiting();
-                                    return;
-                                }
-                            }
-                            else
-                            {
-
-                                FillChoiceBox(choicesList);
-                                choiceBox.SetActive(true);
-                                return;
-                            }
-                        }
-                        else if (dialogueWaitingLine.Count > 0)
-                        {
-                            StartNextDialogueWaiting();
-
-                            return;
-
-
-
-                        }
-
-
-
-                        voiceClipSource?.Stop();
-                        EndDialogue();
-                        showBoxCoroutine = StartCoroutine(ShowDialogueBoxAlpha(false));
-
-
-
-
-                    }
-
-
-
-
                 }
                 else
                 {
-                    if (isShowing)
-                    {
-
-                        if (CurrentLine() != null)
-                        {
-                            NextLine();
-
-                        }
-                        else
-                        {
-                            EndDialogue();
-                            showBoxCoroutine = StartCoroutine(ShowDialogueBoxAlpha(false));
-
-                        }
-                    }
-
-
-
-
-
-
+                    Debug.Log("Hello?");
+                    FillChoiceBox(choicesList);
+                    return;
                 }
             }
+            else if (dialogueWaitingLine.Count > 0)
+            {
+                StartNextDialogueWaiting();
+                return;
+            }
+
+
+
+            voiceClipSource?.Stop();
         }
+        else
+        {
+            if (!isShowing) { return; }
+
+            if (CurrentLine() != null)
+            {
+                NextLine();
+                return;
+
+            }
+        }
+        EndDialogue();
+        showBoxCoroutine = StartCoroutine(ShowDialogueBoxAlpha(false));
     }
 
     private JsonData CurrentLine()
@@ -601,35 +573,87 @@ public class DialogueBox : MonoBehaviour
 
     }
 
+    public bool Interactable = false;
+    public bool NavigationBox = false;
+    private void Update()
+    {
+        if (active && isShowing)
+        {
 
+            if (Interactable)
+            {
+                if (InputManager.Instance.GetButtonDown(ButtonName.Interact))
+                {
+                    Debug.Log("Hello?");
+                    Interact();
+                }
+
+                if (InputManager.Instance.GetButtonDown(ButtonName.SecondAct))
+                {
+                    ToggleAuto();
+                }
+            }
+            else if (NavigationBox)
+            {
+                if (InputManager.Instance.GetAxis2DDown(ButtonName.Move))
+                {
+                    NavigateMenu(InputManager.Instance.GetAxis2D(ButtonName.Move));
+                }
+                if (InputManager.Instance.GetButtonDown(ButtonName.Interact))
+                {
+                    Debug.Log("Hello?");
+                    choiceBox.GetComponent<ChoiceMenu>().TriggerSelected();
+                }
+            }
+        }
+    }
+    public void AddNavigateEventToPlayer(bool addOrRemove)
+    {
+        NavigationBox = addOrRemove;
+        return;
+
+
+
+        //Controller battleCharacterComponent = Player.GetComponent<Controller>();
+        //if (addOrRemove)
+        //{
+        //    Debug.Log("Navigate on");
+        //    battleCharacterComponent.OnMovementPressed += NavigateMenu;
+        //    battleCharacterComponent.OnSelectPressed += choiceBox.GetComponent<ChoiceMenu>().TriggerSelected;
+
+        //}
+        //else
+        //{
+        //    Debug.Log("Navigate off");
+        //    battleCharacterComponent.OnMovementPressed -= NavigateMenu;
+        //    battleCharacterComponent.OnSelectPressed -= choiceBox.GetComponent<ChoiceMenu>().TriggerSelected;
+
+        //}
+    }
 
     public void AddInteractEventToPlayer(bool addOrRemove)
     {
-        Controller battleCharacterComponent = Player?.GetComponent<Controller>();
-        if(battleCharacterComponent == null)
-        {
-            return;
-        }
-        bool contains = battleCharacterComponent.AttackContains(Interact);
-        if (addOrRemove)
-        {
+        Interactable = addOrRemove;
+        //bool contains = battleCharacterComponent.AttackContains(Interact);
+        //if (addOrRemove)
+        //{
 
-            if (!contains)
-            {
-                battleCharacterComponent.OnSelectPressed += Interact;
-                battleCharacterComponent.OnReturnPressed += ToggleAuto;
-            }
+        //    if (!contains)
+        //    {
+        //        battleCharacterComponent.OnSelectPressed += Interact;
+        //        battleCharacterComponent.OnReturnPressed += ToggleAuto;
+        //    }
 
-        }
-        else
-        {
-            if (contains)
-            {
-                battleCharacterComponent.OnSelectPressed -= Interact;
-                battleCharacterComponent.OnReturnPressed -= ToggleAuto;
-            }
+        //}
+        //else
+        //{
+        //    if (contains)
+        //    {
+        //        battleCharacterComponent.OnSelectPressed -= Interact;
+        //        battleCharacterComponent.OnReturnPressed -= ToggleAuto;
+        //    }
 
-        }
+        //}
     }
 
     private void ToggleAuto()
@@ -645,24 +669,7 @@ public class DialogueBox : MonoBehaviour
         OnAutomaticEvent?.Invoke(automaticDialogue);
         //Debug.Log($"Automatic Dialogue Toggled : {automaticDialogue}");
     }
-    public void AddNavigateEventToPlayer(bool addOrRemove)
-    {
-        Controller battleCharacterComponent = Player.GetComponent<Controller>();
-        if (addOrRemove)
-        {
-            Debug.Log("Navigate on");
-            battleCharacterComponent.OnMovementPressed += NavigateMenu;
-            battleCharacterComponent.OnSelectPressed += choiceBox.GetComponent<ChoiceMenu>().TriggerSelected;
 
-        }
-        else
-        {
-            Debug.Log("Navigate off");
-            battleCharacterComponent.OnMovementPressed -= NavigateMenu;
-            battleCharacterComponent.OnSelectPressed -= choiceBox.GetComponent<ChoiceMenu>().TriggerSelected;
-
-        }
-    }
 
     public void NavigateMenu(Vector2 direction)
     {
@@ -795,7 +802,7 @@ public class DialogueBox : MonoBehaviour
         {
             StopCoroutine(showBoxCoroutine);
         }
-        if(setTextCoroutine != null)
+        if (setTextCoroutine != null)
         {
             StopCoroutine(setTextCoroutine);
         }
@@ -873,95 +880,102 @@ public class DialogueBox : MonoBehaviour
     IEnumerator GraduallySetText(LineInfo info)
     {
         string text = info.line;
-        if (isShowing)
+        if (!isShowing) { yield break; }
+        dialogueText.text = "";
+        int index = dialogueIndex;
+        yield return TextMatchingCoroutine(text);
+        dialogueIndex++;
+        bool wasAutomatic = false;
+        if (automaticDialogue || info.skipAtEnd)
         {
-            dialogueText.text = "";
-            string line = "";
-            int index = dialogueIndex;
-            // Define the pattern to match <anything> or any word without tags
-            string pattern = @"<[^>]+>|[^<\s]+";
-
-            // Match all words and tags
-            MatchCollection matches = Regex.Matches(text, pattern);
-
-            foreach (Match match in matches)
+            wasAutomatic = true;
+            if (info.voiced)
             {
-                string wordOrTag = match.Value;
-
-                // If the text contains a tag, append it instantly
-                if (Regex.IsMatch(wordOrTag, @"<[^>]+>"))
+                while (voiceClipSource.isPlaying)
                 {
-                    var secmatch = Regex.Match(wordOrTag, @"<waitSec=([\d\.]+)>");
-                    if (secmatch.Success)
-                    {
-                        string xValue = secmatch.Groups[1].Value;
-                        if (double.TryParse(xValue, NumberStyles.Float, CultureInfo.InvariantCulture, out double x))
-                        {
-                            yield return new WaitForSeconds((float)x);
-                        }
-                    }
-                    else
-                    {
-                        line += wordOrTag;
-                    }
-                }
-                else
-                {
-                    // Gradually append each character of the word
-                    for (int j = 0; j < wordOrTag.Length; j++)
-                    {
-                        line += wordOrTag[j];
-                        dialogueText.SetText(line);
-                        yield return new WaitForSeconds(1f / textCharPerSecond);
-                    }
+                    yield return null;
 
-                    // Add a space after the word if the next match is not a closing tag
-                    if (match.NextMatch().Success && !match.NextMatch().Value.StartsWith("</"))
-                    {
-                        line += " ";
-                    }
+                    yield return new WaitForSeconds(.2f);
                 }
-
-                dialogueText.SetText(line);
             }
-            dialogueText.SetText(line);
-            dialogueIndex++;
-            bool wasAutomatic = false;
-            if (automaticDialogue || info.skipAtEnd)
+            else
             {
-                wasAutomatic = true;
-                if (info.voiced)
+                if (!info.skipAtEnd)
                 {
-                    while (voiceClipSource.isPlaying)
-                    {
-                        yield return null;
-
-                        yield return new WaitForSeconds(.2f);
-                    }
-                }
-                else
-                {
-                    if (!info.skipAtEnd)
-                    {
-                        yield return new WaitForSeconds(2f);
-                    }
-
+                    yield return new WaitForSeconds(2f);
                 }
 
-
-            }
-
-            setTextCoroutine = null;
-
-            if ((automaticDialogue && wasAutomatic && dialogueIndex == index + 1) || info.skipAtEnd)
-            {
-                Interact();
             }
 
 
         }
+        bool WillSkipToNext = (automaticDialogue && dialogueIndex == index + 1) || info.skipAtEnd;
+        setTextCoroutine = null;
+
+        if (currentDialogue.WillBeChoices())
+        {
+            Interact();
+        }
+        else if (WillSkipToNext)
+        {
+            Interact();
+        }
+
+
     }
 
+    private IEnumerator TextMatchingCoroutine(string text)
+    {
+        // Define the pattern to match <anything> or any word without tags
+        string pattern = @"<[^>]+>|[^<\s]+";
+
+        // Match all words and tags
+        MatchCollection matches = Regex.Matches(text, pattern);
+
+        string line = "";
+        foreach (Match match in matches)
+        {
+            string wordOrTag = match.Value;
+
+            // If the text contains a tag, append it instantly
+            if (Regex.IsMatch(wordOrTag, @"<[^>]+>"))
+            {
+                var secmatch = Regex.Match(wordOrTag, @"<waitSec=([\d\.]+)>");
+                if (secmatch.Success)
+                {
+                    string xValue = secmatch.Groups[1].Value;
+                    if (double.TryParse(xValue, NumberStyles.Float, CultureInfo.InvariantCulture, out double x))
+                    {
+                        yield return new WaitForSeconds((float)x);
+                    }
+                }
+                else
+                {
+                    line += wordOrTag;
+                }
+            }
+            else
+            {
+                // Gradually append each character of the word
+                for (int j = 0; j < wordOrTag.Length; j++)
+                {
+                    line += wordOrTag[j];
+                    dialogueText.SetText(line);
+                    yield return new WaitForSeconds(1f / textCharPerSecond);
+                }
+
+                // Add a space after the word if the next match is not a closing tag
+                if (match.NextMatch().Success && !match.NextMatch().Value.StartsWith("</"))
+                {
+                    line += " ";
+                }
+            }
+
+            dialogueText.SetText(line);
+        }
+
+        yield return null;
+    }
 }
 
 

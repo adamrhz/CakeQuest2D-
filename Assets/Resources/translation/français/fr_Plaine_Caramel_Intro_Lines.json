@@ -1,140 +1,276 @@
 {
-    "Data": [
-        {
-            "dataId": "Scene3_PlainesCaramel_001",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Qu’est-ce que je fais à la plage?\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_002",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Il parlait d’un autre monde… Mais j’ai pas l’impression d’avoir quitté le Mexique.\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_003",
-            "jsonData": "{\"portraitPath\":\"Portraits/EyrCott/po_eyrcott_bald_1\",\"talkerName\":\"Eyr Cott\",\"line\":\"Prends ça! Et file-moi ton portefeuille au passage, loser.\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_004",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Un vol en plein jour...? Ouais, je suis toujours au Mexique.\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_005",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"…Hein?\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_006",
-            "jsonData": "{\"portraitPath\":\"Portraits/EyrCott/po_eyrcott_bald_1\",\"talkerName\":\"Eyr Cott\",\"line\":\"Les gens de ta race me dégoûtent…\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_007",
-            "jsonData": "{\"portraitPath\":\"Portraits/Yankee/po_yankee_neutral_1\",\"talkerName\":\"Yankee\",\"line\":\"Mais arrête! Je t’ai rien fait.\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_008",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"C’est pas tous les jours que tu tombes sur un cowboy qui attaque un œuf, mais si y’a du racisme c’est que je suis sur Terre.\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_009",
-            "jsonData": "{\"portraitPath\":\"Portraits/EyrCott/po_eyrcott_bald_1\",\"talkerName\":\"Eyr Cott\",\"line\":\"On devrait emprisonner les gens comme toi dans le gâteau.\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_010",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Le gâteau??\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_011",
-            "jsonData": "{\"portraitPath\":\"Portraits/EyrCott/po_eyrcott_bald_1\",\"talkerName\":\"Eyr Cott\",\"line\":\"Pas si vite demi-portion. J’espère que tu viens pas défendre ce… Cette espèce de… Ce sale...\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_012",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Vraiment? Tu vas dire ce genre de chose en 20-<skipLine>\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_013",
-            "jsonData": "{\"portraitPath\":\"Portraits/EyrCott/po_eyrcott_bald_1\",\"talkerName\":\"Eyr Cott\",\"line\":\"CHAUVE?!\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_014",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"… Chauve?\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_015",
-            "jsonData": "{\"portraitPath\":\"Portraits/Yankee/po_yankee_neutral_1\",\"talkerName\":\"Yankee\",\"line\":\"Mec…\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_016",
-            "jsonData": "{\"portraitPath\":\"Portraits/EyrCott/po_eyrcott_bald_1\",\"talkerName\":\"Eyr Cott\",\"line\":\"Merci pour le pognon, vermine. J’t’invite à le récupérer si tu peux.\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_017",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"ATTENDS T’AS PARLÉ D’UN GÂTEAU!\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_018",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Merde. Comment c’est aussi rapide un cowboy.\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_019",
-            "jsonData": "{\"portraitPath\":\"Portraits/Yankee/po_yankee_neutral_1\",\"talkerName\":\"Yankee\",\"line\":\"Merci d’avoir essayé de m’aider… Mais t’en fais pas, ça m’arrive tous les jours ce genre de chose.\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_020",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Ouais ouais… Il a parlé d’un gâteau. Tu sais de quoi il parle?\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_021",
-            "jsonData": "{\"portraitPath\":\"Portraits/Yankee/po_yankee_neutral_1\",\"talkerName\":\"Yankee\",\"line\":\"Le gâteau? Bah oui, tout le monde le connaît. T’es pas du coin?\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_022",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Pas vraiment. On est dans quel pays?\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_023",
-            "jsonData": "{\"portraitPath\":\"Portraits/Yankee/po_yankee_neutral_1\",\"talkerName\":\"Yankee\",\"line\":\"Sucredorge.\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_024",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"C’est où? Aux États-Unis?\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_025",
-            "jsonData": "{\"portraitPath\":\"Portraits/Yankee/po_yankee_neutral_1\",\"talkerName\":\"Yankee\",\"line\":\"Les États-Unis?\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_026",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"… Oh putain… Je suis vraiment dans un autre monde.\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_027",
-            "jsonData": "{\"portraitPath\":\"Portraits/Yankee/po_yankee_neutral_1\",\"talkerName\":\"Yankee\",\"line\":\"Euh… Je sais pas trop de quoi tu parles, mais si tu cherches le gâteau, je peux t’y amener.\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_028",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Vraiment?!\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_029",
-            "jsonData": "{\"portraitPath\":\"Portraits/Yankee/po_yankee_neutral_1\",\"talkerName\":\"Yankee\",\"line\":\"À une condition. Aide-moi à me venger de cette enflure de cowboy.\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_030",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Bon, OK… Mais ça a intérêt à être rapide. Je meurs de faim.\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_031",
-            "jsonData": "{\"portraitPath\":\"Portraits/Yankee/po_yankee_neutral_1\",\"talkerName\":\"Yankee\",\"line\":\"C’est quoi ton nom d’ailleurs?\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_032",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Jimi, et toi?\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_033",
-            "jsonData": "{\"portraitPath\":\"Portraits/Yankee/po_yankee_neutral_1\",\"talkerName\":\"Yankee\",\"line\":\"Alors… Je suis Yankee.\"}"
-        },
-        {
-            "dataId": "Scene3_PlainesCaramel_034",
-            "jsonData": "{\"portraitPath\":\"Portraits/Jimi/po_jimi_neutral_1\", \"talkerName\":\"Jimi\",\"line\":\"Super, on y va.\"}"
-        }
-    ]
+  "Data": [
+    {
+      "dataId": "Scene3_PlainesCaramel_001",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Qu’est-ce que je fais à la plage?"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_002",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Il parlait d’un autre monde… Mais j’ai pas l’impression d’avoir quitté le Mexique."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_003",
+      "data": {
+        "portraitPath": "Portraits/EyrCott/po_eyrcott_bald_1",
+        "talkerName": "Eyr Cott",
+        "line": "Prends ça! Et file-moi ton portefeuille au passage, loser."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_004",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Un vol en plein jour...? Ouais, je suis toujours au Mexique."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_005",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "…Hein?"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_006",
+      "data": {
+        "portraitPath": "Portraits/EyrCott/po_eyrcott_bald_1",
+        "talkerName": "Eyr Cott",
+        "line": "Les gens de ta race me dégoûtent…"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_007",
+      "data": {
+        "portraitPath": "Portraits/Yankee/po_yankee_neutral_1",
+        "talkerName": "Yankee",
+        "line": "Mais arrête! Je t’ai rien fait."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_008",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "C’est pas tous les jours que tu tombes sur un cowboy qui attaque un œuf, mais si y’a du racisme c’est que je suis sur Terre."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_009",
+      "data": {
+        "portraitPath": "Portraits/EyrCott/po_eyrcott_bald_1",
+        "talkerName": "Eyr Cott",
+        "line": "On devrait emprisonner les gens comme toi dans le gâteau."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_010",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Le gâteau??"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_011",
+      "data": {
+        "portraitPath": "Portraits/EyrCott/po_eyrcott_bald_1",
+        "talkerName": "Eyr Cott",
+        "line": "Pas si vite demi-portion. J’espère que tu viens pas défendre ce… Cette espèce de… Ce sale..."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_012",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Vraiment? Tu vas dire ce genre de chose en 20-<skipLine>"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_013",
+      "data": {
+        "portraitPath": "Portraits/EyrCott/po_eyrcott_bald_1",
+        "talkerName": "Eyr Cott",
+        "line": "CHAUVE?!"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_014",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "… Chauve?"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_015",
+      "data": {
+        "portraitPath": "Portraits/Yankee/po_yankee_neutral_1",
+        "talkerName": "Yankee",
+        "line": "Mec…"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_016",
+      "data": {
+        "portraitPath": "Portraits/EyrCott/po_eyrcott_bald_1",
+        "talkerName": "Eyr Cott",
+        "line": "Merci pour le pognon, vermine. J’t’invite à le récupérer si tu peux."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_017",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "ATTENDS T’AS PARLÉ D’UN GÂTEAU!"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_018",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Merde. Comment c’est aussi rapide un cowboy."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_019",
+      "data": {
+        "portraitPath": "Portraits/Yankee/po_yankee_neutral_1",
+        "talkerName": "Yankee",
+        "line": "Merci d’avoir essayé de m’aider… Mais t’en fais pas, ça m’arrive tous les jours ce genre de chose."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_020",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Ouais ouais… Il a parlé d’un gâteau. Tu sais de quoi il parle?"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_021",
+      "data": {
+        "portraitPath": "Portraits/Yankee/po_yankee_neutral_1",
+        "talkerName": "Yankee",
+        "line": "Le gâteau? Bah oui, tout le monde le connaît. T’es pas du coin?"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_022",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Pas vraiment. On est dans quel pays?"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_023",
+      "data": {
+        "portraitPath": "Portraits/Yankee/po_yankee_neutral_1",
+        "talkerName": "Yankee",
+        "line": "Sucredorge."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_024",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "C’est où? Aux États-Unis?"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_025",
+      "data": {
+        "portraitPath": "Portraits/Yankee/po_yankee_neutral_1",
+        "talkerName": "Yankee",
+        "line": "Les États-Unis?"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_026",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "… Oh putain… Je suis vraiment dans un autre monde."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_027",
+      "data": {
+        "portraitPath": "Portraits/Yankee/po_yankee_neutral_1",
+        "talkerName": "Yankee",
+        "line": "Euh… Je sais pas trop de quoi tu parles, mais si tu cherches le gâteau, je peux t’y amener."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_028",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Vraiment?!"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_029",
+      "data": {
+        "portraitPath": "Portraits/Yankee/po_yankee_neutral_1",
+        "talkerName": "Yankee",
+        "line": "À une condition. Aide-moi à me venger de cette enflure de cowboy."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_030",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Bon, OK… Mais ça a intérêt à être rapide. Je meurs de faim."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_031",
+      "data": {
+        "portraitPath": "Portraits/Yankee/po_yankee_neutral_1",
+        "talkerName": "Yankee",
+        "line": "C’est quoi ton nom d’ailleurs?"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_032",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Jimi, et toi?"
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_033",
+      "data": {
+        "portraitPath": "Portraits/Yankee/po_yankee_neutral_1",
+        "talkerName": "Yankee",
+        "line": "Alors… Je suis Yankee."
+      }
+    },
+    {
+      "dataId": "Scene3_PlainesCaramel_034",
+      "data": {
+        "portraitPath": "Portraits/Jimi/po_jimi_neutral_1",
+        "talkerName": "Jimi",
+        "line": "Super, on y va."
+      }
+    }
+  ]
 }

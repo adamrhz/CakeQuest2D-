@@ -1,138 +1,136 @@
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.Events;
 
-[System.Serializable]
-public class GamePreferenceData
-{
-    public int SFXVolume;
-    public int MusicVolume;
-    public int VoiceVolume;
-    public bool fullScreen;
-    public int width;
-    public int height;
-    public Language Language;
-}
 
 public static class GamePreference
 {
-    private static int sfxVolume = 0;
-    private static int musicVolume = 0;
-    private static int voiceVolume = 0;
-    private static bool fullScreen = true;
-    private static int width = -1;
-    private static int height = -1;
-    private static Language language = LanguageData.defaultLanguage;
-    public static string filePath = "";
+
+
+
 
     public static int SFXVolume
     {
-        get => sfxVolume;
-        set
-        {
-            sfxVolume = value;
-            SaveToFile();
-        }
+        get => Get(nameof(SFXVolume), 50);
+        set => Set(nameof(SFXVolume), value);
     }
-
     public static int MusicVolume
     {
-        get => musicVolume;
-        set
-        {
-            musicVolume = value;
-            SaveToFile();
-        }
+        get => Get(nameof(MusicVolume), 50);
+        set => Set(nameof(MusicVolume), value);
     }
-
     public static int VoiceVolume
     {
-        get => voiceVolume;
-        set
-        {
-            voiceVolume = value;
-            SaveToFile();
-        }
+        get => Get(nameof(VoiceVolume), 50);
+        set => Set(nameof(VoiceVolume), value);
     }
-
+    public static int AmbianceVolume
+    {
+        get => Get(nameof(AmbianceVolume), 50);
+        set => Set(nameof(AmbianceVolume), value);
+    }
     public static bool FullScreen
     {
-        get => fullScreen;
-        set
-        {
-            fullScreen = value;
-            SaveToFile();
-        }
+        get => Get(nameof(FullScreen), true);
+        set => Set(nameof(FullScreen), value);
     }
-
     public static int Width
     {
-        get => width;
-        set
-        {
-            width = value;
-            SaveToFile();
-        }
+        get => Get(nameof(Width), 1920);
+        set => Set(nameof(Width), value);
     }
-
     public static int Height
     {
-        get => height;
-        set
-        {
-            height = value;
-            SaveToFile();
-        }
+        get => Get(nameof(Height), 1080);
+        set => Set(nameof(Height), value);
     }
 
     public static Language Language
     {
-        get => language;
-        set
-        {
-            language = value;
-            SaveToFile();
-        }
+        get => Get(nameof(Language), Language.Français);
+        set => Set(nameof(Language), value);
     }
 
-    public static void SetPath(string path)
-    {
-        filePath = path;
-    }
+    private static Dictionary<string, object> data = new Dictionary<string, object>();
+    public static string filePath = "";
+
+    public static void SetPath(string path) => filePath = path;
 
     public static void SaveToFile()
     {
-        GamePreferenceData data = new GamePreferenceData
-        {
-            SFXVolume = SFXVolume,
-            MusicVolume = MusicVolume,
-            VoiceVolume = VoiceVolume,
-            fullScreen = FullScreen,
-            width = Width,
-            height = Height,
-            Language = Language
-        };
-
-        string jsonString = JsonUtility.ToJson(data, true);
         if (!string.IsNullOrEmpty(filePath))
         {
-            System.IO.File.WriteAllText(filePath, jsonString);
+            Dictionary<string, object> sanitizedData = new Dictionary<string, object>(data);
+            System.IO.File.WriteAllText(filePath, JsonConvert.SerializeObject(sanitizedData, Formatting.Indented));
         }
     }
 
     public static void LoadFromFile()
     {
-        if (System.IO.File.Exists(filePath))
+        if (!string.IsNullOrEmpty(filePath) && File.Exists(filePath))
         {
             string jsonString = System.IO.File.ReadAllText(filePath);
-            GamePreferenceData data = JsonUtility.FromJson<GamePreferenceData>(jsonString);
-
-            sfxVolume = data.SFXVolume;
-            musicVolume = data.MusicVolume;
-            voiceVolume = data.VoiceVolume;
-            fullScreen = data.fullScreen;
-            width = data.width;
-            height = data.height;
-            language = data.Language;
+            {
+                Dictionary<string, object> sanitizedData = JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonString);
+                data = sanitizedData
+                ?? data;
+            }
         }
     }
+
+
+    private static void Set<T>(string key, T value)
+    {
+        data[key] = value;
+        SaveToFile();
+    }
+
+    private static T Get<T>(string key, T defaultValue = default)
+    {
+        if (data.TryGetValue(key, out object value))
+        {
+            if (value is T tValue)
+                return tValue;
+
+            try { return (T)System.Convert.ChangeType(value, typeof(T)); }
+            catch { }
+        }
+        return defaultValue;
+    }
+
+    public static void SetFieldByName(string nameOfField, object val)
+    {
+        if (data.TryGetValue(nameOfField, out object existing))
+        {
+            var existingType = existing?.GetType();
+            var newType = val?.GetType();
+
+            if (existingType == newType || (val != null && existingType?.IsAssignableFrom(newType) == true))
+            {
+                data[nameOfField] = val;
+                SaveToFile();
+            }
+            else
+            {
+                try
+                {
+                    object converted = System.Convert.ChangeType(val, existingType);
+                    data[nameOfField] = converted;
+                    SaveToFile();
+                }
+                catch
+                {
+                    Debug.LogWarning($"[GamePreference] <color=yellow>Failed to assign value to '{nameOfField}'</color> : type mismatch ({newType} to {existingType})");
+                }
+            }
+        }
+        else
+        {
+            data[nameOfField] = val;
+            SaveToFile();
+        }
+    }
+
 }

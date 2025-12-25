@@ -85,6 +85,7 @@ public class NeoInputManager : MonoBehaviour
     }
     public virtual void Awake()
     {
+        Instance = this;
         MainInput = GetComponent<PlayerInput>();
         MainInput.onActionTriggered += OnActionTriggered;
         CurrentMap = MainInput.currentActionMap.name;

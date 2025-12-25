@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7b6e7a34-ad7b-485b-9d8e-e8f55a169637}">
+		<property name="assetPath">
+			<value>VoiceLines/français/Intro_Jimi_003.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.5004081632653059</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9ffd2ad3-acc0-43c1-8f07-2f9966620273}</destination>
+		</relationship>
+	</object>
+</objects>

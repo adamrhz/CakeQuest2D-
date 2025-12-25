@@ -1,28 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BattleState
+public abstract class BattleState : State
 {
     protected BattleManager battleManager;
+    public GameObject choiceMenuPrefab;
     public GameObject choiceMenu;
     public string MenuName = "menu";
     public string BattleMenuPath = $"Battle Menus/";
 
 
 
-
-    public BattleState()
+    public override void OnEnter()
     {
-    }
-    public virtual void OnEnter(BattleManager _battleManager)
-    {
-        battleManager = _battleManager;
         ShowControls();
     }
 
 
-    public virtual void OnExit()
+    public override void OnExit()
     {
 
         BattleManager.Singleton.SetIndicationText("");
@@ -54,15 +51,17 @@ public abstract class BattleState
     public virtual void OnNavigate(Vector2 direction)
     {
     }
-    public virtual void Handle()
+    public override void OnUpdate()
     {
 
     }
 
     public virtual void InstantiateMenu(BattleCharacter character)
     {
-
-        GameObject choiceMenuPrefab = Resources.Load<GameObject>($"{BattleMenuPath}{MenuName}");
+        if(choiceMenuPrefab == null)
+        {
+            choiceMenuPrefab = Resources.Load<GameObject>($"{BattleMenuPath}{MenuName}");
+        }
         if (choiceMenuPrefab != null)
         {
             choiceMenu = GameObject.Instantiate(choiceMenuPrefab, GameObject.Find("HUD Canvas").transform);
@@ -81,5 +80,10 @@ public abstract class BattleState
     {
 
         Resources.UnloadUnusedAssets();
+    }
+
+    public void SetBattleManager(BattleManager battleManager)
+    {
+        this.battleManager = battleManager;
     }
 }

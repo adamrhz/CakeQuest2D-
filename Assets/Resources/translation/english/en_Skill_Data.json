@@ -1,40 +1,67 @@
 {
-    "Data": [
-        {
-            "dataId": "skill_spinning_kick",
-            "jsonData": "{\"skillName\":\"Spinning Kick\",\"skillDescription\":\"Un coup de pied amplifié par la force centrifuge.\"}"
-        },
-        {
-            "dataId": "skill_low_heal",
-            "jsonData": "{\"skillName\":\"Low Heal\",\"skillDescription\":\"Un sort de soin de bas niveau\"}"
-        },
-        {
-            "dataId": "skill_overhead_smash",
-            "jsonData": "{\"skillName\":\"Overhead Smash\",\"skillDescription\":\"Un coup amplifié par la gravité\"}"
-        },
-        {
-            "dataId": "skill_ressurection",
-            "jsonData": "{\"skillName\":\"Resurrection\",\"skillDescription\":\"Un sort pouvant réanimé les alliés évanouis\"}"
-        },
-        {
-            "dataId": "skill_salad_rain",
-            "jsonData": "{\"skillName\":\"Salad Rain\",\"skillDescription\":\"Invoque une pluie de légumes salés\"}"
-        },
-        {
-            "dataId": "skill_slice_dice",
-            "jsonData": "{\"skillName\":\"Slice and Dice\",\"skillDescription\":\"Un enchainement d'attaques tranchantes\"}"
-        },
-        {
-            "dataId": "skill_super_kick",
-            "jsonData": "{\"skillName\":\"Super Kick\",\"skillDescription\":\"Un enchainement de coup de pied\"}"
-        },
-        {
-            "dataId": "skill_egg_drill",
-            "jsonData": "{\"skillName\":\"Egg Drill\",\"skillDescription\":\"Tourne et perce ton adversaire à Hyper Vitesse!\"}"
-        },
-        {
-            "dataId": "skill_primary_lotus",
-            "jsonData": "{\"skillName\":\"Primary Lotus\",\"skillDescription\":\"J'ai vu ça dans un animé!\"}"
-        }
-    ]
+  "Data": [
+    {
+      "dataId": "skill_spinning_kick",
+      "data": {
+        "skillName": "Spinning Kick",
+        "skillDescription": "Un coup de pied amplifié par la force centrifuge."
+      }
+    },
+    {
+      "dataId": "skill_low_heal",
+      "data": {
+        "skillName": "Low Heal",
+        "skillDescription": "Un sort de soin de bas niveau"
+      }
+    },
+    {
+      "dataId": "skill_overhead_smash",
+      "data": {
+        "skillName": "Overhead Smash",
+        "skillDescription": "Un coup amplifié par la gravité"
+      }
+    },
+    {
+      "dataId": "skill_ressurection",
+      "data": {
+        "skillName": "Resurrection",
+        "skillDescription": "Un sort pouvant réanimé les alliés évanouis"
+      }
+    },
+    {
+      "dataId": "skill_salad_rain",
+      "data": {
+        "skillName": "Salad Rain",
+        "skillDescription": "Invoque une pluie de légumes salés"
+      }
+    },
+    {
+      "dataId": "skill_slice_dice",
+      "data": {
+        "skillName": "Slice and Dice",
+        "skillDescription": "Un enchainement d'attaques tranchantes"
+      }
+    },
+    {
+      "dataId": "skill_super_kick",
+      "data": {
+        "skillName": "Super Kick",
+        "skillDescription": "Un enchainement de coup de pied"
+      }
+    },
+    {
+      "dataId": "skill_egg_drill",
+      "data": {
+        "skillName": "Egg Drill",
+        "skillDescription": "Tourne et perce ton adversaire à Hyper Vitesse!"
+      }
+    },
+    {
+      "dataId": "skill_primary_lotus",
+      "data": {
+        "skillName": "Primary Lotus",
+        "skillDescription": "J'ai vu ça dans un animé!"
+      }
+    }
+  ]
 }

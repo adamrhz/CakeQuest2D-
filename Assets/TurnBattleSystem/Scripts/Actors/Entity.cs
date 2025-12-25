@@ -11,7 +11,6 @@ public class Entity : MonoBehaviour
     public int Speed = 50;
     public int Health = 50;
     public int Mana = 50;
-    public int Satisfaction = 0;
     public int Focus = 0;
     public int MaxFocus = 10;
     public delegate void EventHandler(int health, int maxhealth);
@@ -69,7 +68,6 @@ public class Entity : MonoBehaviour
         Health = character.GetReference().MaxHealth;
         character.GetReference().isDead = false;
     }
-
 
     public void AddFocus(int amount)
     {

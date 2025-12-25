@@ -9,9 +9,9 @@ public class AnalyzingTargetState : BattleState
     public List<BattleCharacter> possibleTarget;
     public bool WillCutscene = false;
     int targetIndex = 0;
-    public override void OnEnter(BattleManager _battleManager)
+    public override void OnEnter()
     {
-        base.OnEnter(_battleManager);
+        base.OnEnter();
         battleManager.SetCursor(null);
         battleManager.actorInfoPanel.Appear(true);
         possibleTarget = battleManager.Actors;
@@ -19,7 +19,7 @@ public class AnalyzingTargetState : BattleState
         WillCutscene = false;
         if (possibleTarget.Count == 0)
         {
-            battleManager.ChangeState(new ChoosingActionState());
+            battleManager.Set<ChoosingActionState>();
         }
         else
         {
@@ -53,9 +53,9 @@ public class AnalyzingTargetState : BattleState
         }
 
 
-    public override void Handle()
+    public override void OnUpdate()
     {
-        base.Handle();
+        base.OnUpdate();
     }
     public override void OnSelect()
     {
@@ -72,7 +72,7 @@ public class AnalyzingTargetState : BattleState
     public override void OnBack()
     {
         CamManager.ResetView();
-        battleManager.ChangeState(new ChoosingActionState());
+        battleManager.Set<ChoosingActionState>();
         base.OnBack();
     }
 

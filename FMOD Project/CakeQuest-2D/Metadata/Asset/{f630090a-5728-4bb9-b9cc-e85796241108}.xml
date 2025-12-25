@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{f630090a-5728-4bb9-b9cc-e85796241108}">
+		<property name="assetPath">
+			<value>RPG_Essentials_Free/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9ffd2ad3-acc0-43c1-8f07-2f9966620273}</destination>
+		</relationship>
+	</object>
+</objects>

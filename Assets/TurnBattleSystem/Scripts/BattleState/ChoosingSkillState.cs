@@ -9,21 +9,17 @@ public class ChoosingSkillState : BattleState
         MenuName = "Skillmenu";
     }
 
-    public override void OnEnter(BattleManager _battleManager)
+    public override void OnEnter()
     {
-        base.OnEnter(_battleManager);
-
-
-
         battleManager.GetActor().currentCommand = null;
         battleManager.SetCursor(battleManager.GetActor());
         InstantiateMenu(battleManager.GetActor());
     }
 
 
-    public override void Handle()
+    public override void OnUpdate()
     {
-        base.Handle();
+        base.OnUpdate();
 
 
 
@@ -38,7 +34,7 @@ public class ChoosingSkillState : BattleState
     public override void OnBack()
     {
 
-        battleManager.ChangeState(new ChoosingActionState());
+        battleManager.Set<ChoosingActionState>();
         base.OnBack();
     }
 

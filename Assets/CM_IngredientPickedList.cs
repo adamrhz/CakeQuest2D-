@@ -20,7 +20,7 @@ public class CM_IngredientPickedList : MonoBehaviour
     }
     public void SetMeal(Meal meal)
     {
-        BaseMeal = meal; 
+        BaseMeal = meal;
         ClearPickedIngredientList();
     }
 
@@ -33,7 +33,7 @@ public class CM_IngredientPickedList : MonoBehaviour
         obj.ApplySquashAndStretch(1.5f, .2f);
         AddedIngredients.Add(pickedIngredien);
         UpdateText();
-        Destroy(obj.GetComponent<EventTrigger>());
+        obj.DisableClick();
     }
 
     public void ClearPickedIngredientList()
@@ -49,6 +49,7 @@ public class CM_IngredientPickedList : MonoBehaviour
     private void UpdateText()
     {
         AmountText.SetText($"{AddedIngredients.Count}/{BaseMeal.GetMaxIngredientCount()}");
+        if(AddedIngredients.Count == 0) { return; }
         AmountText.ApplySquashAndStretch(1.5f, .2f);
     }
 }

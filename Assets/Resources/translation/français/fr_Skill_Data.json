@@ -1,40 +1,67 @@
 {
-    "Data": [
+  "Data": [
     {
-        "dataId": "skill_spinning_kick",
-        "jsonData": "{\"skillName\":\"Coup de Pied Tourné\",\"skillDescription\":\"Un coup de pied amplifié par la force centrifuge.\"}"
+      "dataId": "skill_spinning_kick",
+      "data": {
+        "skillName": "Coup de Pied Tourné",
+        "skillDescription": "Un coup de pied amplifié par la force centrifuge."
+      }
     },
     {
-        "dataId": "skill_low_heal",
-        "jsonData": "{\"skillName\":\"Premier Soins\",\"skillDescription\":\"Un sort de soin de bas niveau\"}"
+      "dataId": "skill_low_heal",
+      "data": {
+        "skillName": "Premier Soins",
+        "skillDescription": "Un sort de soin de bas niveau"
+      }
     },
     {
-        "dataId": "skill_overhead_smash",
-        "jsonData": "{\"skillName\":\"Fracas Aérien\",\"skillDescription\":\"Un coup amplifié par la gravité\"}"
+      "dataId": "skill_overhead_smash",
+      "data": {
+        "skillName": "Fracas Aérien",
+        "skillDescription": "Un coup amplifié par la gravité"
+      }
     },
     {
-        "dataId": "skill_ressurection",
-        "jsonData": "{\"skillName\":\"Résurrection\",\"skillDescription\":\"Un sort pouvant réanimé les alliés évanouis\"}"
+      "dataId": "skill_ressurection",
+      "data": {
+        "skillName": "Résurrection",
+        "skillDescription": "Un sort pouvant réanimé les alliés évanouis"
+      }
     },
     {
-        "dataId": "skill_salad_rain",
-        "jsonData": "{\"skillName\":\"Pluie de Salade\",\"skillDescription\":\"Invoque une pluie de légumes salés\"}"
+      "dataId": "skill_salad_rain",
+      "data": {
+        "skillName": "Pluie de Salade",
+        "skillDescription": "Invoque une pluie de légumes salés"
+      }
     },
     {
-        "dataId": "skill_slice_dice",
-        "jsonData": "{\"skillName\":\"Coupe et Découpe\",\"skillDescription\":\"Un enchainement d'attaques tranchantes\"}"
+      "dataId": "skill_slice_dice",
+      "data": {
+        "skillName": "Coupe et Découpe",
+        "skillDescription": "Un enchainement d'attaques tranchantes"
+      }
     },
     {
-        "dataId": "skill_super_kick",
-        "jsonData": "{\"skillName\":\"Super Coup de pied\",\"skillDescription\":\"Un enchainement de coup de pied\"}"
+      "dataId": "skill_super_kick",
+      "data": {
+        "skillName": "Super Coup de pied",
+        "skillDescription": "Un enchainement de coup de pied"
+      }
     },
     {
-        "dataId": "skill_egg_drill",
-        "jsonData": "{\"skillName\":\"Perç'Oeuf\",\"skillDescription\":\"Tourne et perce ton adversaire à Hyper Vitesse!\"}"
+      "dataId": "skill_egg_drill",
+      "data": {
+        "skillName": "Perç'Oeuf",
+        "skillDescription": "Tourne et perce ton adversaire à Hyper Vitesse!"
+      }
     },
     {
-        "dataId": "skill_primary_lotus",
-        "jsonData": "{\"skillName\":\"Lotus Primaire\",\"skillDescription\":\"J'ai vu ça dans un animé!\"}"
+      "dataId": "skill_primary_lotus",
+      "data": {
+        "skillName": "Lotus Primaire",
+        "skillDescription": "J'ai vu ça dans un animé!"
+      }
     }
-    ]
+  ]
 }

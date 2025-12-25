@@ -47,7 +47,7 @@ public class AttackInformation
 
     public void HandleRecipe(BattleCharacter target)
     {
-
+        return;
         if (element != Element.None && element != Element.Support)
         {
             if (target.HandleRecipe(this))

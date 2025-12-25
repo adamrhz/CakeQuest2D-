@@ -1,40 +1,67 @@
 {
-    "Data": [
-        {
-            "dataId": "item_huile_bouillante",
-            "jsonData": "{\"itemName\":\"Bottle of Boiling Oil\",\"itemDescription\":\"Boiling oil. Throwing it at an enemy will deal {healthEffectAmount} damage.\"}"
-        },
-        {
-            "dataId": "item_biscuit_chocolat",
-            "jsonData": "{\"itemName\":\"Chocolate Biscuit\",\"itemDescription\":\"A chocolate biscuit (Yum!) Heals {healthEffectAmount} health points.\"}"
-        },
-        {
-            "dataId": "item_egg",
-            "jsonData": "{\"itemName\":\"Egg\",\"itemDescription\":\"An egg. Yep. Nothing more.\"}"
-        },
-        {
-            "dataId": "item_small_honey_bottle",
-            "jsonData": "{\"itemName\":\"Small Honey Bottle\",\"itemDescription\":\"A bottle of honey that revitalizes {manaEffectAmount} mana points when consumed.\"}"
-        },
-        {
-            "dataId": "item_flour",
-            "jsonData": "{\"itemName\":\"Flour\",\"itemDescription\":\"A cardboard bag filled with flour.\"}"
-        },
-        {
-            "dataId": "item_cook_book",
-            "jsonData": "{\"itemName\":\"Cookbook\",\"itemDescription\":\"A recipe book, allows you to instantly identify an enemy's recipe.\"}"
-        },
-        {
-            "dataId": "item_cake_mix",
-            "jsonData": "{\"itemName\":\"Cake Mix\",\"itemDescription\":\"A cardboard box filled with brown powder. Yum.\"}"
-        },
-        {
-            "dataId": "item_milk_carton",
-            "jsonData": "{\"itemName\":\"Milk Carton\",\"itemDescription\":\"A carton of fresh milk that heals {healthEffectAmount} health points.\"}"
-        },
-        {
-            "dataId": "item_sugar_pot",
-            "jsonData": "{\"itemName\":\"Sugar Pot\",\"itemDescription\":\"Do not consume in large quantities.\"}"
-        }
-    ]
+  "Data": [
+    {
+      "dataId": "item_huile_bouillante",
+      "data": {
+        "itemName": "Bottle of Boiling Oil",
+        "itemDescription": "Boiling oil. Throwing it at an enemy will deal {healthEffectAmount} damage."
+      }
+    },
+    {
+      "dataId": "item_biscuit_chocolat",
+      "data": {
+        "itemName": "Chocolate Biscuit",
+        "itemDescription": "A chocolate biscuit (Yum!) Heals {healthEffectAmount} health points."
+      }
+    },
+    {
+      "dataId": "item_egg",
+      "data": {
+        "itemName": "Egg",
+        "itemDescription": "An egg. Yep. Nothing more."
+      }
+    },
+    {
+      "dataId": "item_small_honey_bottle",
+      "data": {
+        "itemName": "Small Honey Bottle",
+        "itemDescription": "A bottle of honey that revitalizes {manaEffectAmount} mana points when consumed."
+      }
+    },
+    {
+      "dataId": "item_flour",
+      "data": {
+        "itemName": "Flour",
+        "itemDescription": "A cardboard bag filled with flour."
+      }
+    },
+    {
+      "dataId": "item_cook_book",
+      "data": {
+        "itemName": "Cookbook",
+        "itemDescription": "A recipe book, allows you to instantly identify an enemy's recipe."
+      }
+    },
+    {
+      "dataId": "item_cake_mix",
+      "data": {
+        "itemName": "Cake Mix",
+        "itemDescription": "A cardboard box filled with brown powder. Yum."
+      }
+    },
+    {
+      "dataId": "item_milk_carton",
+      "data": {
+        "itemName": "Milk Carton",
+        "itemDescription": "A carton of fresh milk that heals {healthEffectAmount} health points."
+      }
+    },
+    {
+      "dataId": "item_sugar_pot",
+      "data": {
+        "itemName": "Sugar Pot",
+        "itemDescription": "Do not consume in large quantities."
+      }
+    }
+  ]
 }

@@ -74,7 +74,7 @@ public class SwappingMenu : ChoiceMenu
             swapCommand.SetSource(BattleManager.Singleton.GetActor());
             swapCommand.SetTargetIndex(currentButton);
             BattleManager.Singleton.GetActor().currentCommand = swapCommand;
-            BattleManager.Singleton.ChangeState(new PerformActionState());
+            BattleManager.Singleton.Set<PerformActionState>();
         }
 
 

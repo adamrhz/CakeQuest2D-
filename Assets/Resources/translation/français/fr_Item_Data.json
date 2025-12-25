@@ -1,41 +1,67 @@
 {
-    "Data": [
-       
-        {
-            "dataId": "item_huile_bouillante",
-            "jsonData": "{\"itemName\":\"Bouteille d'huile bouillante\",\"itemDescription\":\"De l'huile bouilante. La lancé sur un enemie fera {healthEffectAmount} points de dégats\"}"
-        },
-        {
-            "dataId": "item_biscuit_chocolat",
-            "jsonData": "{\"itemName\":\"Biscuit au chocolat\",\"itemDescription\":\"Un biscuit au chocolat (Miam!) Soigne {healthEffectAmount} points de vie.\"}"
-        },
-        {
-            "dataId": "item_egg",
-            "jsonData": "{\"itemName\":\"Oeuf\",\"itemDescription\":\"Un oeuf. Yep. Rien de plus.\"}"
-        },
-        {
-            "dataId": "item_small_honey_bottle",
-            "jsonData": "{\"itemName\":\"Petite bouteille de miel\",\"itemDescription\":\"Une bouteille de miel qui revitalise {manaEffectAmount} points de Mana à celui qui en bois.\"}"
-        },
-        {
-            "dataId": "item_flour",
-            "jsonData": "{\"itemName\":\"Farine\",\"itemDescription\":\"Un sac en carton rempli de farine.\"}"
-        },
-        {
-            "dataId": "item_cook_book",
-            "jsonData": "{\"itemName\":\"Livre de Cuisine\",\"itemDescription\":\"Un livre de recette, permet d'identifier la recette d'un ennemi instantanément.\"}"
-        },
-        {
-            "dataId": "item_cake_mix",
-            "jsonData": "{\"itemName\":\"Pate à Gateau\",\"itemDescription\":\"Une boite en carton rempli de poudre brunâtre. Miam.\"}"
-        },
-        {
-            "dataId": "item_milk_carton",
-            "jsonData": "{\"itemName\":\"Carton de Lait\",\"itemDescription\":\"Un carton de bon lait frait soignant {healthEffectAmount} points de vie.\"}"
-        },
-        {
-            "dataId": "item_sugar_pot",
-            "jsonData": "{\"itemName\":\"Pot de Sucre\",\"itemDescription\":\"Ne pas consummer en grande quantité.\"}"
-        }
-    ]
+  "Data": [
+    {
+      "dataId": "item_huile_bouillante",
+      "data": {
+        "itemName": "Bouteille d'huile bouillante",
+        "itemDescription": "De l'huile bouilante. La lancé sur un enemie fera {healthEffectAmount} points de dégats"
+      }
+    },
+    {
+      "dataId": "item_biscuit_chocolat",
+      "data": {
+        "itemName": "Biscuit au chocolat",
+        "itemDescription": "Un biscuit au chocolat (Miam!) Soigne {healthEffectAmount} points de vie."
+      }
+    },
+    {
+      "dataId": "item_egg",
+      "data": {
+        "itemName": "Oeuf",
+        "itemDescription": "Un oeuf. Yep. Rien de plus."
+      }
+    },
+    {
+      "dataId": "item_small_honey_bottle",
+      "data": {
+        "itemName": "Petite bouteille de miel",
+        "itemDescription": "Une bouteille de miel qui revitalise {manaEffectAmount} points de Mana à celui qui en bois."
+      }
+    },
+    {
+      "dataId": "item_flour",
+      "data": {
+        "itemName": "Farine",
+        "itemDescription": "Un sac en carton rempli de farine."
+      }
+    },
+    {
+      "dataId": "item_cook_book",
+      "data": {
+        "itemName": "Livre de Cuisine",
+        "itemDescription": "Un livre de recette, permet d'identifier la recette d'un ennemi instantanément."
+      }
+    },
+    {
+      "dataId": "item_cake_mix",
+      "data": {
+        "itemName": "Pate à Gateau",
+        "itemDescription": "Une boite en carton rempli de poudre brunâtre. Miam."
+      }
+    },
+    {
+      "dataId": "item_milk_carton",
+      "data": {
+        "itemName": "Carton de Lait",
+        "itemDescription": "Un carton de bon lait frait soignant {healthEffectAmount} points de vie."
+      }
+    },
+    {
+      "dataId": "item_sugar_pot",
+      "data": {
+        "itemName": "Pot de Sucre",
+        "itemDescription": "Ne pas consummer en grande quantité."
+      }
+    }
+  ]
 }

@@ -53,6 +53,12 @@ public class CharacterObject : SavableObject
     public int recipeLength = 3;
 
 
+    public MealStat PreferredTastes;
+    public List<Meal> FavoriteMeals = new List<Meal>();
+    public List<Meal> DespisedMeals = new List<Meal>();
+
+
+
     public override string GetJsonData()
     {
         var jsonObject = JObject.Parse(base.GetJsonData()); // Start with base class data

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{3958814f-cbce-40c1-8f51-3fe15d296e88}">
+		<property name="name">
+			<value>Cutscenes</value>
+		</property>
+		<relationship name="folder">
+			<destination>{76cd032e-300e-47de-897c-5438ce9c6810}</destination>
+		</relationship>
+	</object>
+</objects>

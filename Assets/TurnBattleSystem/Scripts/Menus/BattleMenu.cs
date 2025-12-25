@@ -26,23 +26,23 @@ public class BattleMenu : ChoiceMenu
         Command attackCommand = new AttackCommand();
         attackCommand.SetSource(BattleManager.Singleton.GetActor());
         BattleManager.Singleton.GetActor().currentCommand = attackCommand;
-        BattleManager.Singleton.ChangeState(new ChoosingTargetState());
+        BattleManager.Singleton.Set<ChoosingTargetState>();
     }
 
     public void Swap()
     {
-        BattleManager.Singleton.ChangeState(new SwapingState());
+        BattleManager.Singleton.Set<SwapingState>();
     }
     public void OpenSkillMenu()
     {
 
-        BattleManager.Singleton.ChangeState(new ChoosingSkillState());
+        BattleManager.Singleton.Set<ChoosingSkillState>();
     }
     public void OpenItemMenu()
     {
         if (BattleManager.Singleton.GetPlayerItems().Count > 0)
         {
-            BattleManager.Singleton.ChangeState(new ChoosingItemState());
+            BattleManager.Singleton.Set<ChoosingItemState>();
         }
     }
 
@@ -51,12 +51,12 @@ public class BattleMenu : ChoiceMenu
         Command attackCommand = new AttackCommand();
         attackCommand.SetSource(BattleManager.Singleton.GetActor());
         BattleManager.Singleton.GetActor().currentCommand = attackCommand;
-        BattleManager.Singleton.ChangeState(new ChoosingTargetState());
+        BattleManager.Singleton.Set<ChoosingTargetState>();
     }
 
 
     public void Analyze()
     {
-        BattleManager.Singleton.ChangeState(new AnalyzingTargetState());
+        BattleManager.Singleton.Set<AnalyzingTargetState>();
     }
 }

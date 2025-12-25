@@ -33,10 +33,11 @@ public class BattleCharacter : MonoBehaviour
     public AnimatorController Animator;
 
     public Entity Entity;
+    public CookingEnjoyment CookingEnjoyment;
+    public int turnsNotAttacked = 0;
 
     public int recipeFailedIndex = 0;
     public int recipeFailsafe = 3;
-    public int turnsNotAttacked = 0;
     public int recipeIndex = 0;
     public List<ElementalAttribute> recipe;
 
@@ -49,6 +50,8 @@ public class BattleCharacter : MonoBehaviour
         //speed = currentCharacter.Speed;
         Animator = GetComponent<AnimatorController>();
         Entity = GetComponent<Entity>();
+        CookingEnjoyment = GetComponent<CookingEnjoyment>();
+        CookingEnjoyment.InitializeTastes(GetReference());
         GetComponentInChildren<SpriteEvents>().SetCharacter(this);
         SetRecipe();
     }

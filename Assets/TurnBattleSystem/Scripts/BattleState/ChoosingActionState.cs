@@ -10,9 +10,8 @@ public class ChoosingActionState : BattleState
         MenuName = "BattleMenu";
     }
 
-    public override void OnEnter(BattleManager _battleManager)
+    public override void OnEnter()
     {
-        base.OnEnter(_battleManager);
         battleManager.actorInfoPanel.Appear(false);
         battleManager.isObserving = false;
         CamManager.ResetView();
@@ -23,11 +22,14 @@ public class ChoosingActionState : BattleState
     }
 
 
-    public override void Handle()
+    public override void OnUpdate()
     {
-        base.Handle();
+        base.OnUpdate();
 
-
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            battleManager.Set<CookingState>();
+        }
     }
 
     public override void OnSelect()

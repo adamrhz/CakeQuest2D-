@@ -11,17 +11,17 @@ public class SwapingState : BattleState
         MenuName = "SwapMenu";
     }
 
-    public override void OnEnter(BattleManager _battleManager)
+    public override void OnEnter()
     {
-        base.OnEnter(_battleManager);
+        base.OnEnter();
         battleManager.GetActor().currentCommand = null;
         InstantiateMenu(battleManager.GetActor());
     }
 
 
-    public override void Handle()
+    public override void OnUpdate()
     {
-        base.Handle();
+        base.OnUpdate();
     }
 
     public override void OnSelect()
@@ -33,7 +33,7 @@ public class SwapingState : BattleState
     public override void OnBack()
     {
 
-        battleManager.ChangeState(new ChoosingActionState());
+        battleManager.Set<ChoosingActionState>();
         base.OnBack();
     }
     public override void OnNavigate(Vector2 direction)

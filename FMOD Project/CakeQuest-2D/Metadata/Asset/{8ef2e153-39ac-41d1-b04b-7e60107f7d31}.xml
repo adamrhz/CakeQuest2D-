@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{8ef2e153-39ac-41d1-b04b-7e60107f7d31}">
+		<property name="assetPath">
+			<value>RPG_Essentials_Free/10_UI_Menu_SFX/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9ffd2ad3-acc0-43c1-8f07-2f9966620273}</destination>
+		</relationship>
+	</object>
+</objects>

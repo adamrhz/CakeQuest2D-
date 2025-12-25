@@ -25,6 +25,8 @@ public class SFXPlayer : MonoBehaviour
     }
     private void PlayRandomClip(AudioSource source, AudioClip[] clips, bool canCancel = true)
     {
+
+        return;
         if (clips != null && clips.Length > 0)
         {
             AudioClip clip = clips[Random.Range(0, clips.Length)];
@@ -38,16 +40,19 @@ public class SFXPlayer : MonoBehaviour
 
     public void PlayOnNavigate()
     {
+        RAudio.Play("UI_Navigate");
         PlayRandomClip(sfxSource, navigate);
     }
 
     public void PlayOnSelect()
     {
+        RAudio.Play("UI_Confirm");
         PlayRandomClip(sfxSource, select);
     }
 
     public void PlayOnBack()
     {
+        RAudio.Play("UI_Return");
         PlayRandomClip(sfxSource, cancel);
     }
 

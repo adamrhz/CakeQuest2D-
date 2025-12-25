@@ -1,3 +1,4 @@
+using Coffee.UIExtensions;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ public class CM_IngredientCheckList : MonoBehaviour
     public RectTransform RecipeListParent;
 
     public Image FillBar;
-
+    public UIParticle StarParticle;
 
     public Coroutine FillBarFillUpRoutine;
 
@@ -50,7 +51,7 @@ public class CM_IngredientCheckList : MonoBehaviour
 
     private void UpdateFillBar(float ratio)
     {
-        if(FillBarFillUpRoutine != null)
+        if (FillBarFillUpRoutine != null)
         {
             StopCoroutine(FillBarFillUpRoutine);
             FillBarFillUpRoutine = null;
@@ -60,19 +61,25 @@ public class CM_IngredientCheckList : MonoBehaviour
 
     public IEnumerator FillBarRoutine(float ratio)
     {
-
+        if(FillBar.fillAmount == ratio)
+        {
+            yield break;
+        }
         float speed = 2f;
         float minSpeed = 1f;
         float lerpAcceleration = 5;
 
-        while(FillBar.fillAmount != ratio)
+        while (FillBar.fillAmount != ratio)
         {
             FillBar.fillAmount = Mathf.MoveTowards(FillBar.fillAmount, ratio, speed * Time.deltaTime);
             speed = Mathf.Clamp(speed - Time.deltaTime * lerpAcceleration, minSpeed, speed);
             yield return null;
         }
 
-
+        if(ratio == 1)
+        {
+            StarParticle?.Play();
+        }
 
         yield return null;
     }
@@ -90,7 +97,7 @@ public class CM_IngredientCheckList : MonoBehaviour
             obj.Image.color = new(1, 1, 1, .2f);
             obj.Active = false;
             //obj.ApplySquashAndStretch(1.5f, .2f);
-            Destroy(obj.GetComponent<EventTrigger>());
+            obj.DisableClick();
         }
         UpdateFillBar(0);
     }

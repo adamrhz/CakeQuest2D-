@@ -1,12 +1,18 @@
 {
-    "Data": [
-        {
-            "dataId": "quest_intro_fetch_ingredients",
-            "jsonData": "{\"questName\":\"Le Gateau\",\"questDescription\":\"Trouves les ingrédients nécéssaires, afin de préparer un gateau.\"}"
-        },
-        {
-            "dataId": "quest_go_to_oven",
-            "jsonData": "{\"questName\":\"Préparer un Gâteau\",\"questDescription\":\"Dirigez-vous vers le four afin de vous préparer un gâteau..\"}"
-        }
-    ]
+  "Data": [
+    {
+      "dataId": "quest_intro_fetch_ingredients",
+      "data": {
+        "questName": "Le Gateau",
+        "questDescription": "Trouves les ingrédients nécéssaires, afin de préparer un gateau."
+      }
+    },
+    {
+      "dataId": "quest_go_to_oven",
+      "data": {
+        "questName": "Préparer un Gâteau",
+        "questDescription": "Dirigez-vous vers le four afin de vous préparer un gâteau.."
+      }
+    }
+  ]
 }

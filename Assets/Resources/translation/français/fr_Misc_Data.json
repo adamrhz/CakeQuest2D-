@@ -1,24 +1,95 @@
 {
-    "Data": [
-        {
-            "dataId": "MenuTranslations",
-            "jsonData": "{\"newGame\":\"Nouvelle Partie\",\"continueGame\":\"Continuer\",\"leaveGame\":\"Quitter\",\"settings\":\"Options\",\"quest\":\"Quêtes\",\"saveFile\":\"Sauvegarde\",\"party\":\"Équipe\",\"inventory\":\"Inventaire\",\"pause\":\"Pause\",\"use\":\"Utiliser\",\"returnToTitle\":\"Retourner au Menu Principal\",\"resume\":\"Reprendre\",\"save\":\"Sauvegarder\",\"recipe\":\"Recette\",\"sfx\":\"Effet Sonore\",\"music\":\"Musique\",\"voices\":\"Voix\",\"language\":\"Langue\",\"close\":\"Fermer\",\"fullScreen\":\"Plein Écran\",\"fullScreen\":\"Plein Écran\",\"resolution\":\"Résolution\",\"cancel\":\"Annuler\",\"skip\":\"Passer\"}"
-        },
-        {
-            "dataId": "Indications",
-            "jsonData": "{\"attack\":\"Attaquez directement vos ennemis!\",\"observe\":\"Observez vos  Ennemis!\",\"skill\":\"Cuisinez vos ennemis avec vos compétences!\",\"done\":\"Complété!\",\"item\":\"Utilisez des objets pour soutenir votre groupe!\",\"swap\":\"Échangez de position avec un allié!\",\"resist\":\"Résisté\",\"weak\":\"Faible\",\"blocked\":\"Bloqué\",\"miss\":\"Raté\",\"null\":\"Annulé\",\"targetOne\":\"Viser \",\"targetAllEnemy\":\"Viser tous les ennemis\",\"targetAllFriend\":\"Viser tous les alliés\",\"recipeStart\":\"Continue de cuisiner\",\"recipeFailed\":\"Mauvais ingrédient...\",\"recipeSuperFailed\":\"Recette Réinitialisé.\",\"recipeSuccess\":\"Repâs 5 Étoiles!!!\",\"automaticDialogueOn\":\"Auto.\",\"automaticDialogueOff\":\"Non-Auto.\",\"interact\":\"Intéragir <sprite name=select>\",\"open\":\"Ouvrir <sprite name=select>\",\"talk\":\"Parler <sprite name=select>\"}"
-        },
-        {
-            "dataId": "element",
-            "jsonData": "{\"Slash\":\"Tranchant\",\"Bash\":\"Frappe\",\"Sweet\":\"Sucré\",\"Sour\":\"Sûre\",\"Bitter\":\"Amer\",\"Salty\":\"Salé\",\"Support\":\"Support\"}"
-        },
-        {
-            "dataId": "ControlScheme",
-            "jsonData": "{\"BattleState\":\"<sprite name=move> Naviguer | <sprite name=select> Sélectionner | <sprite name=cancel> Retourner\",\"ChoosingActionState\":\"<sprite name=move> Naviguer | <sprite name=select> Sélectionner une Action\",\"AnalyzingTargetState\":\"<sprite name=move> Changer de cible à observer\",\"ChoosingItemState\":\"<sprite name=move> Naviguer | <sprite name=select> Sélectionner un Objet | <sprite name=cancel> Retourner\",\"ChoosingSkillState\":\"<sprite name=move> Naviguer | <sprite name=select> Sélectionner une compétence | <sprite name=cancel> Retourner\",\"ChoosingTargetState\":\"<sprite name=move> Changer de cible | <sprite name=select> Confirmer la/les cible(s) | <sprite name=cancel> Retourner\",\"CutsceneState\":\"<sprite name=select> Suivant\",\"NothingState\":\" ... \",\"PerformActionState\":\"<sprite name=cancel> Bloquer\",\"SwapingState\":\"\"}"
-        },
-        {
-            "dataId": "Locations",
-            "jsonData": "{\"kitchen\":\"Cuisine\",\"dining_hall\":\"Salle à manger\",\"room\":\"Chambre\"}"
-        }
-    ]
+  "Data": [
+    {
+      "dataId": "MenuTranslations",
+      "data": {
+        "newGame": "Nouvelle Partie",
+        "continueGame": "Continuer",
+        "leaveGame": "Quitter",
+        "settings": "Options",
+        "quest": "Quêtes",
+        "saveFile": "Sauvegarde",
+        "party": "Équipe",
+        "inventory": "Inventaire",
+        "pause": "Pause",
+        "use": "Utiliser",
+        "returnToTitle": "Retourner au Menu Principal",
+        "resume": "Reprendre",
+        "save": "Sauvegarder",
+        "recipe": "Recette",
+        "sfx": "Effet Sonore",
+        "music": "Musique",
+        "voices": "Voix",
+        "language": "Langue",
+        "close": "Fermer",
+        "fullScreen": "Plein Écran",
+        "resolution": "Résolution",
+        "cancel": "Annuler",
+        "skip": "Passer"
+      }
+    },
+    {
+      "dataId": "Indications",
+      "data": {
+        "attack": "Attaquez directement vos ennemis!",
+        "observe": "Observez vos  Ennemis!",
+        "skill": "Cuisinez vos ennemis avec vos compétences!",
+        "done": "Complété!",
+        "item": "Utilisez des objets pour soutenir votre groupe!",
+        "swap": "Échangez de position avec un allié!",
+        "resist": "Résisté",
+        "weak": "Faible",
+        "blocked": "Bloqué",
+        "miss": "Raté",
+        "null": "Annulé",
+        "targetOne": "Viser ",
+        "targetAllEnemy": "Viser tous les ennemis",
+        "targetAllFriend": "Viser tous les alliés",
+        "recipeStart": "Continue de cuisiner",
+        "recipeFailed": "Mauvais ingrédient...",
+        "recipeSuperFailed": "Recette Réinitialisé.",
+        "recipeSuccess": "Repâs 5 Étoiles!!!",
+        "automaticDialogueOn": "Auto.",
+        "automaticDialogueOff": "Non-Auto.",
+        "interact": "Intéragir <sprite name=select>",
+        "open": "Ouvrir <sprite name=select>",
+        "talk": "Parler <sprite name=select>"
+      }
+    },
+    {
+      "dataId": "element",
+      "data": {
+        "Slash": "Tranchant",
+        "Bash": "Frappe",
+        "Sweet": "Sucré",
+        "Sour": "Sûre",
+        "Bitter": "Amer",
+        "Salty": "Salé",
+        "Support": "Support"
+      }
+    },
+    {
+      "dataId": "ControlScheme",
+      "data": {
+        "BattleState": "<sprite name=move> Naviguer | <sprite name=select> Sélectionner | <sprite name=cancel> Retourner",
+        "ChoosingActionState": "<sprite name=move> Naviguer | <sprite name=select> Sélectionner une Action",
+        "AnalyzingTargetState": "<sprite name=move> Changer de cible à observer",
+        "ChoosingItemState": "<sprite name=move> Naviguer | <sprite name=select> Sélectionner un Objet | <sprite name=cancel> Retourner",
+        "ChoosingSkillState": "<sprite name=move> Naviguer | <sprite name=select> Sélectionner une compétence | <sprite name=cancel> Retourner",
+        "ChoosingTargetState": "<sprite name=move> Changer de cible | <sprite name=select> Confirmer la/les cible(s) | <sprite name=cancel> Retourner",
+        "CutsceneState": "<sprite name=select> Suivant",
+        "NothingState": " ... ",
+        "PerformActionState": "<sprite name=cancel> Bloquer",
+        "SwapingState": ""
+      }
+    },
+    {
+      "dataId": "Locations",
+      "data": {
+        "kitchen": "Cuisine",
+        "dining_hall": "Salle à manger",
+        "room": "Chambre"
+      }
+    }
+  ]
 }
